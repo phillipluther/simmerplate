@@ -1,6 +1,6 @@
 # Presswork
 
-> A responsive typography boilerplate to make your text look not too shabby.
+> A minimal typography boilerplate to make your text look not too shabby.
 
 [![license][license-image]][license-url] [![changelog][changelog-image]][changelog-url]
 
