@@ -2,9 +2,7 @@
 
 > A responsive typography boilerplate to make your text look not too shabby.
 
-[![License][license-image]][license-url]
-[![Change Kog][changelog-image]][changelog-url]
-
+[![license][license-image]][license-url] [![changelog][changelog-image]][changelog-url]
 
 ## Installation
 
@@ -16,7 +14,7 @@
 
 **Good ol' Copy/Paste or Download**
 
-Manually grab the latest presswork.css from here: #
+You can manually grab the latest CSS files [here](https://github.com/phillipluther/presswork/tree/master/lib).
 
 
 ## Demo
@@ -26,7 +24,7 @@ Manually grab the latest presswork.css from here: #
 
 ## About the Project
 
-Unstyled text messes with my chi. I created Presswork as an easy drop-in CSS file to get initial text formatting out of the way in new projects. 
+Unstyled text messes with my chi. I created Presswork as an easy drop-in CSS file to get initial text formatting out of the way in new projects.
 
 ### Presswork Is
 
@@ -49,4 +47,4 @@ It's also not a full theme or CSS framework. It doesn't include styles for form 
 
 ## Contributing
 
-Presswork is a fledgling project. To contribute, just [open a pull request](#) or [log an issue](#) on GitHub.
+Presswork is a fledgling project. To contribute, just [open a pull request](https://github.com/phillipluther/presswork/pulls) or [log an issue](https://github.com/phillipluther/presswork/issues) on GitHub.
