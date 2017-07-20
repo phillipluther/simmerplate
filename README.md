@@ -2,7 +2,7 @@
 
 > A minimal typography boilerplate to make your text look not too shabby.
 
-[![license][license-image]][license-url] [![changelog][changelog-image]][changelog-url]
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md) [![Change Log](https://img.shields.io/badge/changelog-md-blue.svg)](CHANGELOG.md)
 
 ## Installation
 
