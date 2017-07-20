@@ -1,0 +1,186 @@
+
+body {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.602em;
+}
+
+/**
+ * ============================================================================
+ *
+ * Headings
+ *
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 1.802em 0 0.702em; }
+
+/*
+ * If a heading is the first child in a node, give it the standard margin up
+ * top; the intent here is that it'll appear inside a container ... a card or a
+ * banner or the like ... which will probably have its own padding/margins
+ */
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.266em;
+}
+
+h1 { font-weight: 900; }
+
+h2,
+h3,
+h4,
+h5,
+h6 { font-weight: 700; }
+
+h1 { font-size: 1.802em; }
+h2 { font-size: 1.602em; }
+h3 { font-size: 1.424em; }
+h4 { font-size: 1.266em; }
+h5 { font-size: 1.125em; }
+
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/**
+ * ============================================================================
+ *
+ * Text and Related Styling
+ *
+ */
+
+/*
+ * If a paragraph immediately follows an H1, we assume it's an introductory
+ * blurb or capsule summary. We give it a little extra flavor to make it stand
+ * out.
+ */
+h1 + p {
+    font-size: 1.125em;
+    font-style: italic;
+    line-height: 1.424em;
+}
+
+p,
+ul,
+ol, {
+    margin-bottom: 1.424em;
+}
+
+/*
+ * Just as with first-child headings above, we shave the margin from paragraphs
+ * appearing as the last-child in a container.
+ */
+p:last-child,
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    padding-left: 1.424em;
+}
+
+li { margin-bottom: 1em; }
+
+small {
+    display: inline-block;
+    font-size: 0.79em;
+    line-height: 1.602em;
+}
+
+/**
+ * ============================================================================
+ *
+ * Code/Pre Styles
+ *
+ * The background and borders on our code-formatting blocks are best guesses
+ * for something that'll work on either a light or dark theme. Not perfect, but
+ * in the absence of knowing what this'll appear on it's fine enough.
+ */
+pre {
+    overflow: auto;
+    margin: 1.424em 0;
+    padding: 1em 0.702em;
+    border: 1px solid rgba(166, 166, 166, 0.5);
+}
+
+pre:last-child { margin-bottom: 0; }
+
+code {
+    display: inline-block;
+    padding: 0 0.39em;
+}
+
+pre,
+code {
+    background: rgba(166, 166, 166, 0.25);
+}
+
+pre > code { background: transparent; }
+
+/*
+ * A general divider reset. Like the border color of our pre/code blocks, we
+ * make a best guess for color that'll work'ish on both light and dark themes.
+ */
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    margin: 2.281em 0;
+    background: rgba(166, 166, 166, 0.5);
+}
+
+/**
+ * ============================================================================
+ *
+ * "Medium" Screens
+ *
+ * We kick up the font-size but don't re-scale our relative spacing. Things
+ * open up naturally from the underlying text size on all our ems.
+ *
+ */
+@media screen and (min-width: 640px) {
+    body { font-size: 19px; }
+}
+
+/**
+ * ============================================================================
+ *
+ * "Large" Screens
+ *
+ * We tick up the font-size another notch and increase the size of our top-most
+ * headings. Introductory text scales up a bit and small text scales down, too.
+ *
+ */
+@media screen and (min-width: 900px) {
+    body { font-size: 20px; }
+
+    h1 { font-size: 2.281em; }
+    h2 { font-size: 1.802em; }
+
+    h1 + p {
+        font-size: 1.266em;
+    }
+
+    small { font-size: 0.702em; }
+}

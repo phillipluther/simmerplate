@@ -1,0 +1,47 @@
+@import './presswork.css';
+
+@font-face {
+    font-family: 'PW-Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PW-Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'PW-Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PW-Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./fonts/Lato-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'PW-Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: 'PW-Sans';
+    font-style: italic;
+    font-weight: 900;
+    src: url('./fonts/Lato-Black.ttf');
+}
+
+body {
+    font-family: 'PW-Sans';
+}
