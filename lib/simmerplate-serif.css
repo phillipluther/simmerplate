@@ -1,14 +1,14 @@
-@import './presswork.css';
+@import './simmerplate.css';
 
 @font-face {
-    font-family: 'PW-Serif';
+    font-family: 'SP-Serif';
     font-style: normal;
     font-weight: 400;
     src: url('./fonts/ZillaSlab-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'PW-Serif';
+    font-family: 'SP-Serif';
     font-style: italic;
     font-weight: 400;
     src: url('./fonts/ZillaSlab-Italic.ttf');
@@ -21,33 +21,33 @@
  * these weights.
  */
 @font-face {
-    font-family: 'PW-Serif';
+    font-family: 'SP-Serif';
     font-style: normal;
     font-weight: 700;
     src: url('./fonts/ZillaSlab-SemiBold.ttf');
 }
 
 @font-face {
-    font-family: 'PW-Serif';
+    font-family: 'SP-Serif';
     font-style: italic;
     font-weight: 700;
     src: url('./fonts/ZillaSlab-SemiBoldItalic.ttf');
 }
 
 @font-face {
-    font-family: 'PW-Serif';
+    font-family: 'SP-Serif';
     font-style: normal;
     font-weight: 900;
     src: url('./fonts/ZillaSlab-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'PW-Sans';
+    font-family: 'SP-Sans';
     font-style: italic;
     font-weight: 900;
     src: url('./fonts/ZillaSlab-BoldItalic.ttf');
 }
 
 body {
-    font-family: 'PW-Serif';
+    font-family: 'SP-Serif';
 }

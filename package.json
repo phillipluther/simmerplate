@@ -1,13 +1,14 @@
 {
-  "name": "presswork",
+  "name": "simmerplate",
   "version": "0.1.0",
-  "description": "A typography boilerplate for creating responsive apps.",
-  "main": "lib/presswork-sans.css",
+  "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
+  "main": "lib/simmerplate-sans.min.css",
   "files": "lib",
   "scripts": {
     "build": "gulp build",
+    "build:prod": "gulp clean-and-build-prod",
     "dev": "gulp watch",
-    "test": "stylelint presswork.css"
+    "test": "stylelint simmerplate.css"
   },
   "keywords": [
     "typography",
@@ -16,8 +17,8 @@
     "responsive"
   ],
   "license": "MIT",
-  "repository": "https://github.com/phillipluther/presswork",
-  "bugs": "https://github.com/phillipluther/presswork/issues",
+  "repository": "https://github.com/phillipluther/simmerplate",
+  "bugs": "https://github.com/phillipluther/simmerplate/issues",
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -25,6 +26,7 @@
     "gulp-clean-css": "^3.7.0",
     "gulp-concat-css": "^2.3.0",
     "gulp-refresh": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylelint": "^4.0.0",
     "normalize.css": "^7.0.0",
