@@ -19,7 +19,7 @@ Then simply include it in your project.
 import 'simmerplate';
 ```
 
-The default import is for `simmerplate-sans.min.css`. If you want to use a serif font versions, you can pull it in like so:
+The default import is for `simmerplate-sans.min.css`. If you want to use a serif font version, you can pull it in like so:
 
 ```
 import 'simmerplate/lib/simmerplate-serif.css';
