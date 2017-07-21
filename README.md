@@ -9,7 +9,20 @@
 **NPM**
 
 ```
-... coming soon ...
+npm install --save simmerplate
+
+```
+
+Then simply include it in your project.
+
+```
+import 'simmerplate';
+```
+
+The default import is for `simmerplate-sans.min.css`. If you want to use a serif font versions, you can pull it in like so:
+
+```
+import 'simmerplate/lib/simmerplate-serif.css';
 ```
 
 **Good ol' Copy/Paste or Download**
