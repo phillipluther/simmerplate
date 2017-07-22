@@ -6,20 +6,22 @@
 
 ## Installation
 
-**NPM**
+### NPM
 
 ```
 npm install --save simmerplate
 
 ```
 
-Then simply include it in your project.
+If you've got CSS and font loading set up in your project (from something like `create-react-app`, eg.) you can simply include it.
 
 ```
 import 'simmerplate';
 ```
 
-The default import is for `simmerplate-sans.min.css`. If you want to use a serif font version, you can pull it in like so:
+#### Variants
+
+Simmerplate comes in a serif and sans-serif version. The default import is for sans. If you want to use the serif font version, you can pull it in like so:
 
 ```
 import 'simmerplate/lib/simmerplate-serif.css';
@@ -27,7 +29,7 @@ import 'simmerplate/lib/simmerplate-serif.css';
 
 **Good ol' Copy/Paste or Download**
 
-You can manually grab the latest CSS files [here](https://github.com/phillipluther/simmerplate/tree/master/lib).
+You can manually grab the latest CSS and font files [here](https://github.com/phillipluther/simmerplate/tree/master/lib).
 
 
 ## Demo

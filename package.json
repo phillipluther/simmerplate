@@ -2,13 +2,13 @@
   "name": "simmerplate",
   "version": "0.1.1",
   "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
-  "main": "lib/simmerplate-sans.min.css",
-  "files": "lib",
+  "main": "css/simmerplate-sans.min.css",
+  "files": "css",
   "scripts": {
     "build": "gulp build",
-    "build:prod": "gulp clean-and-build-prod",
+    "build:prod": "gulp clean && gulp build-prod",
     "dev": "gulp watch",
-    "test": "stylelint simmerplate.css"
+    "test": "gulp lint"
   },
   "keywords": [
     "typography",
@@ -29,6 +29,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylelint": "^4.0.0",
+    "gulp-zip": "^4.0.0",
     "normalize.css": "^7.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
