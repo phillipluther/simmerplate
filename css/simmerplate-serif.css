@@ -723,14 +723,14 @@ hr {
   font-family: 'SP-Serif';
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/ZillaSlab-Regular.ttf");
+  src: url('../fonts/ZillaSlab-Regular.ttf');
 }
 
 @font-face {
   font-family: 'SP-Serif';
   font-style: italic;
   font-weight: 400;
-  src: url("../../fonts/ZillaSlab-Italic.ttf");
+  src: url('../fonts/ZillaSlab-Italic.ttf');
 }
 
 /**
@@ -744,28 +744,28 @@ hr {
   font-family: 'SP-Serif';
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/ZillaSlab-SemiBold.ttf");
+  src: url('../fonts/ZillaSlab-SemiBold.ttf');
 }
 
 @font-face {
   font-family: 'SP-Serif';
   font-style: italic;
   font-weight: 700;
-  src: url("../../fonts/ZillaSlab-SemiBoldItalic.ttf");
+  src: url('../fonts/ZillaSlab-SemiBoldItalic.ttf');
 }
 
 @font-face {
   font-family: 'SP-Serif';
   font-style: normal;
   font-weight: 900;
-  src: url("../../fonts/ZillaSlab-Bold.ttf");
+  src: url('../fonts/ZillaSlab-Bold.ttf');
 }
 
 @font-face {
   font-family: 'SP-Sans';
   font-style: italic;
   font-weight: 900;
-  src: url("../../fonts/ZillaSlab-BoldItalic.ttf");
+  src: url('../fonts/ZillaSlab-BoldItalic.ttf');
 }
 
 body {

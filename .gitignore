@@ -4,8 +4,9 @@
 # testing
 /coverage
 
-# production
+# production building
 /build
+/temp
 
 # misc
 .DS_Store
