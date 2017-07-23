@@ -3,7 +3,7 @@
 A "good enough" UI baseline so you can focus on development. It's not quite a boilerplate.
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
-[![NPM Information](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/simmerplate)
+[![NPM Information](https://img.shields.io/npm/v/simmerplate.svg)](https://www.npmjs.com/package/simmerplate)
 [![Change Log](https://img.shields.io/badge/changelog-md-blue.svg)](CHANGELOG.md)
 
 --------------------------------------
