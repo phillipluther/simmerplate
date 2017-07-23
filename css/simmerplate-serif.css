@@ -486,6 +486,8 @@ template {
 [hidden] {
   display: none;
 }
+/*! Simmerplate | MIT License | github.com/phillipluther/simmerplate */
+
 body {
   font-size: 17px;
   font-weight: normal;
@@ -716,4 +718,56 @@ hr {
   small {
     font-size: 0.702em;
   }
+}
+@font-face {
+  font-family: 'SP-Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ZillaSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SP-Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/ZillaSlab-Italic.ttf');
+}
+
+/**
+ * Technically Semi-bold should be font-weight: 600; and Bold should be
+ * font-weight: 700;, but the serif I'm using doesn't come in a Black weight.
+ * To avoid having to futz with the core styles I took some liberties mapping
+ * these weights.
+ */
+
+@font-face {
+  font-family: 'SP-Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/ZillaSlab-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'SP-Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/ZillaSlab-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'SP-Serif';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/ZillaSlab-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'SP-Sans';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/ZillaSlab-BoldItalic.ttf');
+}
+
+body {
+  font-family: 'SP-Serif';
 }
