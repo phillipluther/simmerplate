@@ -93,11 +93,11 @@ function extendCommon(variant) {
         .pipe(gulp.dest(output.css));
 }
 
-gulp.task('build-sans', ['lint', 'clean-css'], function() {
+gulp.task('build-sans', ['lint'], function() {
     return extendCommon('sans');
 });
 
-gulp.task('build-serif', ['lint', 'clean-css'], function() {
+gulp.task('build-serif', ['lint'], function() {
     return extendCommon('serif');
 });
 

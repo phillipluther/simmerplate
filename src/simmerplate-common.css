@@ -1,5 +1,9 @@
 /*! Simmerplate | MIT License | github.com/phillipluther/simmerplate */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 17px;
     font-weight: normal;
@@ -121,7 +125,7 @@ pre {
     overflow: auto;
     margin: 1.424em 0;
     padding: 1em 0.702em;
-    border: 1px solid rgba(166, 166, 166, 0.5);
+    border: 1px solid #d9d9d9;
 }
 
 pre:last-child { margin-bottom: 0; }
@@ -131,10 +135,8 @@ code {
     padding: 0 0.39em;
 }
 
-pre,
-code {
-    background: rgba(166, 166, 166, 0.25);
-}
+pre { background: #f9f9f9; }
+code { background: #f0f0f0; }
 
 pre > code { background: transparent; }
 
@@ -148,7 +150,272 @@ hr {
     height: 1px;
     border: 0;
     margin: 2.281em 0;
-    background: rgba(166, 166, 166, 0.5);
+    background: #d9d9d9;
+}
+
+/**
+ * ============================================================================
+ *
+ * Form Elements
+ *
+ */
+label {
+    display: block;
+    font-size: 0.79em;
+    font-weight: 700;
+    margin-bottom: 0.555em;
+}
+
+/* common to all inputs */
+input {
+    font-family: inherit;
+    font-size: 1.125em;
+    margin: 0 0 1.424em;
+}
+
+/* text'ish input types ... a general bordered box */
+[type="text"],
+[type="email"],
+[type="password"],
+[type="search"],
+[type="url"],
+[type="month"],
+[type="week"],
+[type="date"],
+[type="time"],
+[type="datetime-local"],
+[type="number"],
+[type="tel"],
+[type="file"],
+[type="color"] {
+    border: 1px solid #b9b9b9;
+    outline: 2px solid transparent;
+    transition: outline 180ms;
+}
+
+/* full-width inputs */
+[type="text"],
+[type="email"],
+[type="password"],
+[type="search"],
+[type="url"],
+[type="month"],
+[type="week"],
+[type="date"],
+[type="time"],
+[type="datetime-local"],
+[type="number"],
+[type="tel"],
+[type="file"] {
+    width: 100%;
+    padding: 0.79em;
+    background: #f9f9f9;
+}
+
+[type="text"]:focus,
+[type="email"]:focus,
+[type="password"]:focus,
+[type="search"]:focus,
+[type="url"]:focus,
+[type="month"]:focus,
+[type="week"]:focus,
+[type="date"]:focus,
+[type="time"]:focus,
+[type="datetime-local"]:focus,
+[type="number"]:focus,
+[type="tel"]:focus,
+[type="file"]:focus,
+[type="image"]:focus,
+[type="color"]:focus {
+    outline: 2px solid #369;
+}
+
+/* Button'ish input types */
+[type="submit"],
+[type="reset"],
+[type="button"] {
+    cursor: pointer; /* odd that browsers don't do this */
+    border: 0;
+    border-radius: 3px;
+    padding: 0.79em 1.125em;
+    transition: background-color 180ms;
+}
+
+[type="submit"] {
+    background: #369;
+    color: #fff;
+}
+
+[type="submit"]:focus,
+[type="reset"]:focus,
+[type="button"]:focus {
+    outline: 0;
+    text-decoration: underline;
+}
+
+[type="submit"]:hover,
+[type="submit"]:focus {
+    background: #147;
+}
+
+[type="submit"]:active {
+    background: #47a;
+}
+
+[type="reset"],
+[type="button"] {
+    background: #d9d9d9;
+}
+
+[type="reset"]:hover,
+[type="reset"]:focus,
+[type="button"]:hover,
+[type="button"]:focus {
+    background: #e9e9e9;
+}
+
+[type="reset"]:active,
+[type="button"]:active {
+    background: #c9c9c9;
+}
+
+/* file type button'ish styling */
+[type="file"]::-webkit-file-upload-button {
+    background: #d9d9d9;
+    border: 0;
+    margin: -0.79em 0 -0.79em -0.79em;
+    padding: 0.79em 1.125em;
+    transition: background-color 180ms;
+    cursor: pointer;
+}
+
+[type="file"]::-webkit-file-upload-button:hover {
+    background: #e9e9e9;
+}
+
+[type="file"]::-webkit-file-upload-button:active {
+    background: #c9c9c9;
+}
+
+[type="file"]::-webkit-file-upload-button:focus {
+    outline: 0;
+}
+
+/* slider styles ... broken down in this granular fashion for browser
+ * compatibility reasons
+ */
+[type="range"] {
+    width: 100%;
+    height: 25px;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+[type="range"]:focus {
+    outline: none;
+}
+
+[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.493em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    background: #d9d9d9;
+    -webkit-transition: background-color 180ms;
+}
+
+[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #369;
+}
+
+[type="range"]::-webkit-slider-thumb {
+    border: 1px solid #a9a9a9;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background: #e9e9e9;
+    cursor: pointer;
+    margin-top: -0.25em;
+    -webkit-appearance: none;
+}
+
+[type="range"]:focus::-webkit-slider-thumb {
+    border-color: #898989;
+}
+
+[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 0.493em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    background: #d9d9d9;
+}
+
+[type="range"]:focus::-moz-range-track {
+    background: #369;
+}
+
+[type="range"]::-moz-range-thumb {
+    border: 1px solid #a9a9a9;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background: #e9e9e9;
+    cursor: pointer;
+    margin-top: -0.25em;
+}
+
+[type="range"]:focus::-moz-range-thumb {
+    border-color: #898989;
+}
+
+[type="range"]::-ms-track {
+    width: 100%;
+    height: 0.493em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+[type="range"]::-ms-fill-lower,
+[type="range"]::-ms-fill-upper {
+    background: #d9d9d9;
+    border-radius: 0.25em;
+}
+
+[type="range"]::-ms-thumb {
+    margin-top: 0;
+    border: 1px solid #a9a9a9;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background: #e9e9e9;
+    cursor: pointer;
+}
+
+[type="range"]:focus::-ms-fill-lower,
+[type="range"]:focus::-ms-fill-upper {
+    background: #369;
+}
+
+[type="range"]:focus::-ms-thumb {
+    border-color: #898989;
+}
+
+/* Color Inputs */
+[type="color"] {
+    background: #fff;
+    padding: 0 0.125em;
+    width: 2.887em;
+    height: 2.566em;
+}
+
+/* Checkbox and Radio special handling */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
 }
 
 /**

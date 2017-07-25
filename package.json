@@ -2,7 +2,7 @@
   "name": "simmerplate",
   "version": "0.2.1",
   "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
-  "main": "css/simmerplate-sans.min.css",
+  "main": "css/simmerplate-sans.css",
   "files": "css",
   "scripts": {
     "build": "gulp build",
