@@ -1,0 +1,113 @@
+// ============================================================================
+// ============================================================================
+// ============================================================================
+//
+// BASE VARIABLE SETTINGS
+//
+// These are the core settings for building out Simmerplate. Tweaking these
+// values will have wide-sweeping - but consistent and predictable - effects
+// on the compiled CSS.
+//
+// This is about the only place in the style source where explicit values
+// are specified.
+//
+//
+
+//
+// ============================================================================
+// Breakpoints
+//
+// Our responsive breakpoints for use in Simmerplate's media queries. Pretty
+// standard and correspond to tablet'ish and desktop'ish sizes.
+//
+$layout-sm: 480px; // currently not used
+$layout-md: 640px;
+$layout-lg: 900px;
+
+//
+// ============================================================================
+// Scaling
+//
+// Changing this value will impact Simmerplate more than any other setting. We
+// use this to relatively scale everything from font sizes to margins. The
+// $scale mix-ins are defined in ./derived.scss but all pull from this.
+//
+$scale-factor: 1.125;
+
+//
+// ============================================================================
+// Base Text Sizes
+//
+// These define our font-size bases for each media query breakpoint. All
+// heading and other text sizes scale relatively from here base on the
+// $scale-factor variable above.
+//
+$textBase-min: 16px;
+$textBase-sm: 17px;
+$textBase-md: 19px;
+$textBase-lg: 20px;
+
+//
+// ============================================================================
+// Input Specifics
+//
+// These establish the basis for input elements. We use the term "input" with
+// some liberty to mean "anything form-related." Textareas and select list
+// core settings are found here.
+//
+$input-height: 60px;
+$input-borderWidth: 1px;
+$input-focusRingWidth: 2px;
+$range-trackHeight: 1em;
+$range-thumbSize: 2em;
+
+//
+// ============================================================================
+// Transition Timings
+//
+// Some general timings for CSS transition. For the purposes of Simmerplate we
+// only need fast and slow ... not a whole lot of overly-fancy stuff and just
+// a bit of polish.
+//
+$transitionTiming-fast: 180ms;
+$transitionTiming-slow: 500ms;
+
+//
+// ============================================================================
+// Button and CTA Tweaks
+//
+//
+//
+$focusRing-width: 2px;
+
+//
+// ============================================================================
+// Palette
+//
+// We don't do much with color beyond applying a bit of style to inputs. We're
+// trying to match'ish browser defaults ... just nicer.
+//
+$borderHeavy-color: #999;
+$borderLight-color: #b9b9b9;
+$inputBg-color: #f9f9f9;
+$placeholder-color: #c9c9c9;
+
+$button-color: #d9d9d9;
+// hover/focus/active states are set in ./derived.scss based on $button-color
+$buttonText-color: inherit;
+$buttonBorder-color: #b9b9b9;
+
+$focusRing-color: #58b;
+
+$divider-color: #d9d9d9;
+
+$codeBorder-color: #d9d9d9;
+$codeBg-color: #f9f9f9;
+$codeInline-color: #f0f0f0;
+
+$rangeTrack-color: #f9f9f9;
+$rangeTrackBorder-color: #b9b9b9;
+$rangeThumb-color: #f9f9f9;
+$rangeThumbBorder-color: #999;
+$rangeFocusTrack-color: #f9f9f9;
+// range thumb focus styles are set in ./derived.scss
