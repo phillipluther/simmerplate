@@ -705,7 +705,10 @@ fieldset {
 
 /* common to all inputs */
 
-input {
+input,
+select,
+textarea,
+fieldset {
   font-family: inherit;
   margin: 0 0 1.42383em;
 }
@@ -742,7 +745,10 @@ input {
 [type="number"],
 [type="tel"],
 [type="file"],
-[type="color"] {
+[type="color"],
+select,
+textarea {
+  display: block;
   border-right: 1px solid #b9b9b9;
   border-bottom: 1px solid #999;
   border-left: 1px solid #b9b9b9;
@@ -947,6 +953,31 @@ input {
   cursor: pointer;
 }
 
+select,
+textarea {
+  padding: 0.79012em;
+  background: #f9f9f9;
+}
+
+select {
+  width: 100%;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  line-height: 1.60181em;
+  min-height: 6.40723em;
+}
+
+textarea[cols] {
+  width: auto;
+}
+
+textarea[rows] {
+  height: auto;
+}
+
 /* Checkbox and Radio special handling */
 
 /* this is important and hard-coded; we use it to style a (sane) use-case
@@ -993,7 +1024,9 @@ input {
 [type="submit"]:focus,
 [type="reset"]:focus,
 [type="button"]:focus,
-[type="image"]:focus {
+[type="image"]:focus,
+select:focus,
+textarea:focus {
   outline: 2px solid #58b;
 }
 
@@ -1003,8 +1036,68 @@ input {
   outline: none;
 }
 
-select {
-  width: 100%;
+[disabled],
+[type="radio"]:disabled + label,
+[type="checkbox"]:disabled + label {
+  color: #b9b9b9;
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[disabled],
+[disabled]:hover,
+[disabled]:active {
+  background: white -webkit-gradient(linear, left bottom, left top, from(white), to(#f9f9f9));
+  background: white linear-gradient(0deg, white, #f9f9f9);
+}
+
+[type="range"]:disabled {
+  background: transparent;
+}
+
+[type="range"]:disabled::-webkit-slider-runnable-track {
+  background: white -webkit-gradient(linear, left bottom, left top, from(white), to(#f9f9f9));
+  background: white linear-gradient(0deg, white, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type="range"]:disabled::-webkit-slider-thumb {
+  background: white -webkit-gradient(linear, left bottom, left top, from(white), to(#f9f9f9));
+  background: white linear-gradient(0deg, white, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type="range"]:disabled::-moz-range-track {
+  background: white linear-gradient(0deg, white, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type="range"]:disabled::-moz-range-thumb {
+  background: white linear-gradient(0deg, white, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type="range"]:disabled::-ms-track {
+  background: white linear-gradient(0deg, white, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type="range"]:disabled::-ms-thumb {
+  background: white linear-gradient(0deg, white, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type="file"]:disabled::-webkit-file-upload-button {
+  background: #f9f9f9;
+  border-right: 1px solid #b9b9b9;
+  color: inherit;
+  cursor: not-allowed;
 }
 
 /**

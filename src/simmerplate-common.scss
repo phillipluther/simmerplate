@@ -179,7 +179,10 @@ fieldset {
 }
 
 /* common to all inputs */
-input {
+input,
+select,
+textarea,
+fieldset {
     font-family: inherit;
     margin: 0 0 $text-spacing;
 }
@@ -208,7 +211,10 @@ input {
 [type="number"],
 [type="tel"],
 [type="file"],
-[type="color"] {
+[type="color"],
+select,
+textarea {
+    display: block;
     border-right: $input-borderWidth solid $borderLight-color;
     border-bottom: $input-borderWidth solid $borderHeavy-color;
     border-left: $input-borderWidth solid $borderLight-color;
@@ -319,6 +325,12 @@ input {
     background: $rangeFocusThumb-color;
 }
 
+@mixin rangeTrackDisabledStyles() {
+    background: white linear-gradient(0deg, white, $inputBg-color);
+    border-color: $inputDisabledBorder-color;
+    cursor: not-allowed;
+}
+
 [type="range"]::-webkit-slider-runnable-track { @include rangeTrackStyles; }
 [type="range"]::-webkit-slider-thumb { @include rangeThumbStyles; }
 [type="range"]:focus::-webkit-slider-runnable-track { background: $rangeFocusTrack-color; }
@@ -344,6 +356,26 @@ input {
     height: $input-height;
     cursor: pointer;
 }
+
+select,
+textarea {
+    padding: $input-padding;
+    background: $inputBg-color;
+}
+
+select {
+    width: 100%;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    line-height: $text-lineHeight;
+    min-height: $text-lineHeight * 4;
+}
+
+textarea[cols] { width: auto; }
+textarea[rows] { height: auto; }
 
 /* Checkbox and Radio special handling */
 
@@ -391,7 +423,9 @@ $checkRadio-offset: 2em;
 [type="submit"]:focus,
 [type="reset"]:focus,
 [type="button"]:focus,
-[type="image"]:focus {
+[type="image"]:focus,
+select:focus,
+textarea:focus {
     outline: $input-focusRingWidth solid $focusRing-color;
 }
 
@@ -401,14 +435,38 @@ $checkRadio-offset: 2em;
     outline: none;
 }
 
-select {
-    width: 100%;
-    //padding: $input-padding;
+[disabled],
+[type="radio"]:disabled + label,
+[type="checkbox"]:disabled + label {
+    color: $inputDisabled-color;
+    border-color: $inputDisabledBorder-color;
+    cursor: not-allowed;
 }
 
-option {
-    //padding: $input-padding;
+[disabled],
+[disabled]:hover,
+[disabled]:active {
+    background: white linear-gradient(0deg, white, $inputBg-color);
 }
+
+[type="range"]:disabled {
+    background: transparent;
+}
+
+[type="range"]:disabled::-webkit-slider-runnable-track { @include rangeTrackDisabledStyles; }
+[type="range"]:disabled::-webkit-slider-thumb { @include rangeTrackDisabledStyles; }
+[type="range"]:disabled::-moz-range-track { @include rangeTrackDisabledStyles; }
+[type="range"]:disabled::-moz-range-thumb { @include rangeTrackDisabledStyles; }
+[type="range"]:disabled::-ms-track { @include rangeTrackDisabledStyles; }
+[type="range"]:disabled::-ms-thumb { @include rangeTrackDisabledStyles; }
+
+[type="file"]:disabled::-webkit-file-upload-button {
+    background: $inputBg-color;
+    border-right: 1px solid $borderLight-color;
+    color: inherit;
+    cursor: not-allowed;
+}
+
 
 /**
  * ============================================================================
