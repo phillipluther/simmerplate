@@ -2,6 +2,13 @@
 
 ---------------------------------
 
+## August 2017
+
+### 0.3.0
+
+* Added polish for default form inputs
+* Transition vanilla CSS to SASS in the development pipeline for easier mods
+
 ## July 2017
 
 ### 0.2.0
