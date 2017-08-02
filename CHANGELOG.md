@@ -2,7 +2,19 @@
 
 ---------------------------------
 
+## August 2017
+
+### 0.3.0
+
+* Added polish for default form inputs
+* Transition vanilla CSS to SASS in the development pipeline for easier mods
+
 ## July 2017
+
+### 0.2.0
+
+* Simplified project structure into more common CSS/fonts folders
+* Added a sans and serif download bundle for easy project consumption outside of NPM
 
 ### 0.1.1
 

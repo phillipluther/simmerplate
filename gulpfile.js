@@ -4,7 +4,7 @@ var
     path = require('path'),
     src = path.resolve(__dirname, './src'),
     source = {
-        common: path.join(src, './simmerplate-common.css'),
+        common: path.join(src, './simmerplate-common.scss'),
         normalize: path.resolve(__dirname, './node_modules/normalize.css/normalize.css'),
         sans: path.join(src, './simmerplate-sans.css'),
         sansFont: path.resolve(__dirname, './fonts/Lato*.ttf'),
@@ -30,6 +30,7 @@ var
     minify = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     refresh = require('gulp-refresh'),
+    sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     zip = require('gulp-zip');
 
@@ -80,25 +81,45 @@ gulp.task('clean', ['clean-css', 'clean-downloads', 'clean-temp']);
 // or 'serif'
 function extendCommon(variant) {
     var
-        variantFile = 'simmerplate-' + variant + '.css',
+        variantFile = 'simmerplate-' + variant + '.scss',
         variantSource = path.join(src, variantFile);
 
-    return gulp.src([source.normalize, source.common, variantSource])
+    return gulp.src(variantSource)
         .pipe(sourcemaps.init({ loadMaps: true }))
-            .pipe(autoprefix(autoprefixConf))
+            .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(output.temp));
+}
+
+function normalizeAndPrefix(variant) {
+    var
+        variantFile = 'simmerplate-' + variant + '.css',
+        tempBuild = path.join(output.temp, variantFile);
+
+    return gulp.src([source.normalize, tempBuild])
+        .pipe(sourcemaps.init({ loadMaps: true }))
             .pipe(concat(variantFile, {
                 rebaseUrls: false, // our build accounts for relative pathing
             }))
+            .pipe(autoprefix(autoprefixConf))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(output.css));
 }
 
-gulp.task('build-sans', ['lint', 'clean-css'], function() {
+gulp.task('sass-sans', ['lint'], function() {
     return extendCommon('sans');
 });
 
-gulp.task('build-serif', ['lint', 'clean-css'], function() {
+gulp.task('sass-serif', ['lint'], function() {
     return extendCommon('serif');
+});
+
+gulp.task('build-sans', ['sass-sans'], function() {
+    return normalizeAndPrefix('sans');
+});
+
+gulp.task('build-serif', ['sass-serif'], function() {
+    return normalizeAndPrefix('serif');
 });
 
 gulp.task('build', ['build-sans', 'build-serif']);
@@ -193,7 +214,7 @@ gulp.task('bundle', ['bundle-sans', 'bundle-serif']);
 gulp.task('watch', ['build'], function() {
     refresh.listen();
 
-    gulp.watch(src + '/simmerplate*.css', [
+    gulp.watch(src + '/**/*.scss', [
         'build'
     ]);
 });

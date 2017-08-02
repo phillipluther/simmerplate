@@ -45,7 +45,7 @@ You can manually grab the latest CSS and font files as handy archives [here](htt
 
 Rendered browser defaults futz with my chi. They're awful. CSS normalizers improve things but don't look great. CSS frameworks come with a ton of baggage you often don't need.
 
-Simmerplate is a drop-in CSS file to get initial text formatting out of the way.
+Simmerplate is a drop-in CSS file to get initial formatting out of the way.
 
 ### Simmerplate Is
 
@@ -55,15 +55,16 @@ In addition to browser normalization it also provides sane spacing and layout tw
 
 * All the sweetness from normalize.css, plus
 * Solid-looking typography with good vertical rhythm
+* Better-than-default styling for form elements
 * A sound starting point for creating your own typography styles; it's non-specific and easy to override
-* A no-worries, "fine for now" development baseline so you can focus on heavy-lifting, not finessing text
+* A no-worries, "fine for now" development baseline so you can focus on heavy-lifting, not finessing text and form inputs
 
 
 ### Simmerplate is Not
 
 Simmerplate is not an assertion of perfect text flow. If you dig how it looks, roll with it. If not, style over it or scrap it altogether down the way.
 
-It's also not a full theme or CSS framework. It doesn't include styles for form elements (should it?). It doesn't include a grid. Simmerplate merely tries to whip text into better shape.
+It's also not a full theme or CSS framework. It doesn't include a grid. It also contains no Javascript so it relies on what browsers are able to process purely via CSS. Simmerplate merely tries to whip the browser default UI into better shape.
 
 
 ## Contributing

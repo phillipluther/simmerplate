@@ -1,8 +1,8 @@
 {
   "name": "simmerplate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
-  "main": "css/simmerplate-sans.min.css",
+  "main": "css/simmerplate-sans.css",
   "files": "css",
   "scripts": {
     "build": "gulp build",
@@ -30,16 +30,21 @@
     "gulp-concat-css": "^2.3.0",
     "gulp-refresh": "^1.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylelint": "^4.0.0",
     "gulp-zip": "^4.0.0",
     "normalize.css": "^7.0.0",
-    "stylelint-config-standard": "^17.0.0"
+    "stylelint": "^8.0.0",
+    "stylelint-config-sass-guidelines": "^3.1.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-scss": "^1.5.1"
   },
   "stylelint": {
-    "extends": "stylelint-config-standard",
+    "extends": "stylelint-config-sass-guidelines",
     "rules": {
-      "indentation": 4
+      "indentation": 4,
+      "order/properties-alphabetical-order": null
     }
   }
 }

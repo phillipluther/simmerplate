@@ -488,10 +488,15 @@ template {
 }
 /*! Simmerplate | MIT License | github.com/phillipluther/simmerplate */
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 1.602em;
+  line-height: 1.60181em;
 }
 
 /**
@@ -507,7 +512,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1.802em 0 0.702em;
+  margin: 1.80203em 0 0.70233em;
 }
 
 /*
@@ -531,7 +536,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.266em;
+  line-height: 1.26562em;
 }
 
 h1 {
@@ -547,19 +552,19 @@ h6 {
 }
 
 h1 {
-  font-size: 1.802em;
+  font-size: 1.80203em;
 }
 
 h2 {
-  font-size: 1.602em;
+  font-size: 1.60181em;
 }
 
 h3 {
-  font-size: 1.424em;
+  font-size: 1.42383em;
 }
 
 h4 {
-  font-size: 1.266em;
+  font-size: 1.26562em;
 }
 
 h5 {
@@ -568,7 +573,7 @@ h5 {
 
 h6 {
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /**
@@ -587,14 +592,13 @@ h6 {
 h1 + p {
   font-size: 1.125em;
   font-style: italic;
-  line-height: 1.424em;
+  line-height: 1.42383em;
 }
 
 p,
 ul,
-ol,
- {
-  margin-bottom: 1.424em;
+ol {
+  margin-bottom: 1.42383em;
 }
 
 /*
@@ -610,7 +614,7 @@ ol:last-child {
 
 ul,
 ol {
-  padding-left: 1.424em;
+  padding-left: 1.42383em;
 }
 
 li {
@@ -619,8 +623,8 @@ li {
 
 small {
   display: inline-block;
-  font-size: 0.79em;
-  line-height: 1.602em;
+  font-size: 0.79012em;
+  line-height: 1.60181em;
 }
 
 /**
@@ -635,9 +639,9 @@ small {
 
 pre {
   overflow: auto;
-  margin: 1.424em 0;
-  padding: 1em 0.702em;
-  border: 1px solid rgba(166, 166, 166, 0.5);
+  margin: 1.42383em 0;
+  padding: 1em 0.70233em;
+  border: 1px solid #d9d9d9;
 }
 
 pre:last-child {
@@ -646,12 +650,15 @@ pre:last-child {
 
 code {
   display: inline-block;
-  padding: 0 0.39em;
+  padding: 0 0.29767em;
 }
 
-pre,
+pre {
+  background: #f9f9f9;
+}
+
 code {
-  background: rgba(166, 166, 166, 0.25);
+  background: #f0f0f0;
 }
 
 pre > code {
@@ -668,8 +675,462 @@ hr {
   width: 100%;
   height: 1px;
   border: 0;
-  margin: 2.281em 0;
-  background: rgba(166, 166, 166, 0.5);
+  margin: 2.2807em 0;
+  background: #d9d9d9;
+}
+
+/**
+ * ============================================================================
+ *
+ * Form Elements
+ *
+ */
+
+legend,
+label {
+  display: block;
+  font-size: 0.79012em;
+  font-weight: 700;
+}
+
+label {
+  margin-bottom: 0.55493em;
+}
+
+fieldset {
+  padding: 0.79012em 0.79012em 0;
+  background: #f9f9f9;
+  border: 1px solid #b9b9b9;
+}
+
+/* common to all inputs */
+
+input,
+select,
+textarea,
+fieldset {
+  font-family: inherit;
+  margin: 0 0 1.42383em;
+}
+
+/* general placeholder styles */
+
+/* stylelint-disable */
+
+::-webkit-input-placeholder {
+  color: #c9c9c9;
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  color: #c9c9c9;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  color: #c9c9c9;
+  font-style: italic;
+}
+
+/* stylelint-enable */
+
+/* text'ish input types ... a general bordered box */
+
+[type='text'],
+[type='email'],
+[type='password'],
+[type='search'],
+[type='url'],
+[type='month'],
+[type='week'],
+[type='date'],
+[type='time'],
+[type='datetime-local'],
+[type='number'],
+[type='tel'],
+[type='file'],
+[type='color'],
+select,
+textarea {
+  display: block;
+  border-right: 1px solid #b9b9b9;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #b9b9b9;
+  border-top: 1px solid #b9b9b9;
+  font-size: 1.125em;
+}
+
+/* full-width inputs */
+
+[type='text'],
+[type='email'],
+[type='password'],
+[type='search'],
+[type='url'],
+[type='month'],
+[type='week'],
+[type='date'],
+[type='time'],
+[type='datetime-local'],
+[type='number'],
+[type='tel'],
+[type='file'] {
+  width: 100%;
+  padding: 0.79012em;
+  background: #f9f9f9;
+}
+
+/* Button'ish input types */
+
+[type='submit'],
+[type='reset'],
+[type='button'] {
+  cursor: pointer;
+  /* odd that browsers don't do this */
+  padding: 0.79012em 1.125em;
+  border: 1px solid #b9b9b9;
+  -webkit-transition: background-color 180ms;
+  transition: background-color 180ms;
+}
+
+[type='submit'] {
+  background: #d9d9d9;
+  color: inherit;
+}
+
+[type='reset'],
+[type='button'] {
+  background: transparent;
+}
+
+[type='submit']:hover,
+[type='reset']:hover,
+[type='button']:hover {
+  background: #e6e6e6;
+}
+
+[type='submit']:active,
+[type='reset']:active,
+[type='button']:active {
+  background: #cccccc;
+}
+
+/* file type button'ish styling */
+
+[type='file']::-webkit-file-upload-button {
+  background: #d9d9d9;
+  border: 0;
+  margin: -0.79012em -0.79012em;
+  padding: 0.79012em;
+  -webkit-transition: background-color 180ms;
+  transition: background-color 180ms;
+  cursor: pointer;
+}
+
+[type='file']::-webkit-file-upload-button:hover {
+  background: #e6e6e6;
+}
+
+[type='file']::-webkit-file-upload-button:active {
+  background: #cccccc;
+}
+
+[type='file']::-webkit-file-upload-button:focus {
+  outline: 0;
+}
+
+/* slider styles ... broken down in this granular fashion for browser
+ * compatibility reasons
+ */
+
+[type='range'] {
+  width: 100%;
+  height: 2em;
+  padding: 0;
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+[type='range']::-webkit-slider-runnable-track {
+  width: calc(100% - (1px * 2));
+  height: calc(1em - (1px));
+  cursor: pointer;
+  border: 1px solid #b9b9b9;
+  border-radius: 1em;
+  background: #f9f9f9;
+  -webkit-transition: background-color 180ms;
+  transition: background-color 180ms;
+}
+
+[type='range']::-webkit-slider-thumb {
+  border: 1px solid #999;
+  height: calc(2em - 2px);
+  width: calc(2em - 2px);
+  border-radius: 50%;
+  background: #f9f9f9;
+  cursor: pointer;
+  margin-top: -0.5em;
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+[type='range']:focus::-webkit-slider-runnable-track {
+  background: #f9f9f9;
+}
+
+[type='range']:focus::-webkit-slider-thumb {
+  border-color: #58b;
+  background: #58b;
+}
+
+[type='range']::-moz-range-track {
+  width: calc(100% - (1px * 2));
+  height: calc(1em - (1px));
+  cursor: pointer;
+  border: 1px solid #b9b9b9;
+  border-radius: 1em;
+  background: #f9f9f9;
+  -webkit-transition: background-color 180ms;
+  transition: background-color 180ms;
+}
+
+[type='range']::-moz-range-thumb {
+  border: 1px solid #999;
+  height: calc(2em - 2px);
+  width: calc(2em - 2px);
+  border-radius: 50%;
+  background: #f9f9f9;
+  cursor: pointer;
+  margin-top: -0.5em;
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+[type='range']:focus::-moz-range-track {
+  background: #f9f9f9;
+}
+
+[type='range']:focus::-moz-range-thumb {
+  border-color: #58b;
+  background: #58b;
+}
+
+[type='range']::-ms-track {
+  width: calc(100% - (1px * 2));
+  height: calc(1em - (1px));
+  cursor: pointer;
+  border: 1px solid #b9b9b9;
+  border-radius: 1em;
+  background: #f9f9f9;
+  -webkit-transition: background-color 180ms;
+  transition: background-color 180ms;
+}
+
+[type='range']::-ms-thumb {
+  border: 1px solid #999;
+  height: calc(2em - 2px);
+  width: calc(2em - 2px);
+  border-radius: 50%;
+  background: #f9f9f9;
+  cursor: pointer;
+  margin-top: 0;
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+[type='range']:focus::-ms-track {
+  background: #f9f9f9;
+}
+
+[type='range']:focus::-ms-thumb {
+  border-color: #58b;
+  background: #58b;
+}
+
+[type='range']::-ms-fill-upper,
+[type='range']::-ms-fill-lower {
+  display: none;
+}
+
+/* Color Inputs */
+
+[type='color'] {
+  background: transparent;
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+select,
+textarea {
+  padding: 0.79012em;
+  background: #f9f9f9;
+}
+
+select {
+  width: 100%;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  line-height: 1.60181em;
+  min-height: 6.40723em;
+}
+
+/* stylelint-disable */
+
+textarea[cols] {
+  width: auto;
+}
+
+textarea[rows] {
+  height: auto;
+}
+
+/* stylelint-enable */
+
+/* Checkbox and Radio special handling */
+
+/* this is important and hard-coded; we use it to style a (sane) use-case
+   where the label follows the input */
+
+[type='radio'],
+[type='checkbox'] {
+  width: 2em;
+}
+
+[type='radio'] + label,
+[type='checkbox'] + label {
+  width: 100%;
+  display: inline-block;
+  font-size: 1.125em;
+  font-weight: 400;
+  margin-left: -2em;
+  padding-left: 2em;
+  cursor: pointer;
+}
+
+[type='radio']:focus + label,
+[type='checkbox']:focus + label {
+  outline: 2px solid #58b;
+}
+
+/* Focus Management ... or at Least, Handling */
+
+[type='text']:focus,
+[type='email']:focus,
+[type='password']:focus,
+[type='search']:focus,
+[type='url']:focus,
+[type='month']:focus,
+[type='week']:focus,
+[type='date']:focus,
+[type='time']:focus,
+[type='datetime-local']:focus,
+[type='number']:focus,
+[type='tel']:focus,
+[type='file']:focus,
+[type='image']:focus,
+[type='color']:focus,
+[type='submit']:focus,
+[type='reset']:focus,
+[type='button']:focus,
+[type='image']:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #58b;
+}
+
+[type='radio']:focus,
+[type='checkbox']:focus,
+[type='range']:focus {
+  outline: none;
+}
+
+[disabled],
+[type='radio']:disabled + label,
+[type='checkbox']:disabled + label {
+  color: #b9b9b9;
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[disabled],
+[disabled]:hover,
+[disabled]:active {
+  background: #fff -webkit-gradient(linear, left bottom, left top, from(#fff), to(#f9f9f9));
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+}
+
+[type='range']:disabled {
+  background: transparent;
+}
+
+[type='range']:disabled::-webkit-slider-runnable-track {
+  background: #fff -webkit-gradient(linear, left bottom, left top, from(#fff), to(#f9f9f9));
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type='range']:disabled::-webkit-slider-thumb {
+  background: #fff -webkit-gradient(linear, left bottom, left top, from(#fff), to(#f9f9f9));
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type='range']:disabled::-moz-range-track {
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type='range']:disabled::-moz-range-thumb {
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type='range']:disabled::-ms-track {
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type='range']:disabled::-ms-thumb {
+  background: #fff linear-gradient(0deg, #fff, #f9f9f9);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+[type='file']:disabled::-webkit-file-upload-button {
+  background: #f9f9f9;
+  border-right: 1px solid #b9b9b9;
+  color: inherit;
+  cursor: not-allowed;
+}
+
+/**
+ * ============================================================================
+ *
+ * "Small" Screens
+ *
+ * We kick up the font-size but don't re-scale our relative spacing. Things
+ * open up naturally from the underlying text size on all our ems.
+ *
+ */
+
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 17px;
+  }
 }
 
 /**
@@ -704,61 +1165,62 @@ hr {
   }
 
   h1 {
-    font-size: 2.281em;
+    font-size: 2.2807em;
   }
 
   h2 {
-    font-size: 1.802em;
+    font-size: 1.80203em;
   }
 
   h1 + p {
-    font-size: 1.266em;
+    font-size: 1.26562em;
   }
 
   small {
-    font-size: 0.702em;
+    font-size: 0.70233em;
   }
 }
+
 @font-face {
   font-family: 'SP-Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Lato-Regular.ttf');
+  src: url("../fonts/Lato-Regular.ttf");
 }
 
 @font-face {
   font-family: 'SP-Sans';
   font-style: italic;
   font-weight: 400;
-  src: url('../fonts/Lato-Italic.ttf');
+  src: url("../fonts/Lato-Italic.ttf");
 }
 
 @font-face {
   font-family: 'SP-Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/Lato-Bold.ttf');
+  src: url("../fonts/Lato-Bold.ttf");
 }
 
 @font-face {
   font-family: 'SP-Sans';
   font-style: italic;
   font-weight: 700;
-  src: url('../fonts/Lato-BoldItalic.ttf');
+  src: url("../fonts/Lato-BoldItalic.ttf");
 }
 
 @font-face {
   font-family: 'SP-Sans';
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/Lato-Black.ttf');
+  src: url("../fonts/Lato-Black.ttf");
 }
 
 @font-face {
   font-family: 'SP-Sans';
   font-style: italic;
   font-weight: 900;
-  src: url('../fonts/Lato-Black.ttf');
+  src: url("../fonts/Lato-Black.ttf");
 }
 
 body {
