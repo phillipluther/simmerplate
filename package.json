@@ -36,16 +36,15 @@
     "gulp-zip": "^4.0.0",
     "normalize.css": "^7.0.0",
     "stylelint": "^8.0.0",
+    "stylelint-config-sass-guidelines": "^3.1.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-scss": "^1.5.1"
   },
   "stylelint": {
-    "extends": "stylelint-config-standard",
-    "plugins": [
-      "stylelint-scss"
-    ],
+    "extends": "stylelint-config-sass-guidelines",
     "rules": {
-      "indentation": 4
+      "indentation": 4,
+      "order/properties-alphabetical-order": null
     }
   }
 }

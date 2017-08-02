@@ -1,6 +1,25 @@
-
+// ============================================================================
+// ============================================================================
+// ============================================================================
+//
+// DERIVED VARIABLE SETTINGS
+//
+// These rules give meaning to values set in ./base.scss. They're still "core"
+// to the project but are relative to the base. There are no explicit units
+// set here; if you want to create customized builds from the Simmerplate
+// source it's probably best to tweak ./base.scss first.
+//
+//
 @import './base.scss';
 
+//
+// ============================================================================
+// Spacing Units
+//
+// Helper variables to be used across our CSS. These determine everything from
+// the vertical rhythm of text to padding and margins. We auto-generate them
+// based on the $scale-factor value set in ./base.scss.
+//
 $scaleUp-1: 1em * $scale-factor;            // 1.125
 $scaleUp-2: $scaleUp-1 * $scale-factor;     // 1.266
 $scaleUp-3: $scaleUp-2 * $scale-factor;     // 1.424
@@ -18,23 +37,31 @@ $scaleDown-4: $scaleDown-3 / $scale-factor; // 0.624
 $scaleDown-5: $scaleDown-4 / $scale-factor; // 0.555
 $scaleDown-6: $scaleDown-5 / $scale-factor; // 0.493
 
-
-
+//
+// ============================================================================
+// Text and Headings
+//
+// The initial font size is set in ./base.scss. Here we apply line heights and
+// normalized margins based on our scaling above.
+//
 $text-small: $scaleDown-2;
 $text-spacing: $scaleUp-3;
 $text-lineHeight: $scaleUp-4;
 
-// *** Headings ***
 $heading-lineHeight: $scaleUp-2;
 $heading-margins: $scaleUp-5 0 $scaleDown-3;
 
-
-
+//
+// ============================================================================
+// Form Elements (including buttons)
+//
+// Applying some normalcy to the default inputs and button elements. We also
+// create some colors for hover/focus/active button states derived from the
+// base color.
+//
 $input-padding: $scaleDown-2;
-
 $rangeFocusThumb-color: $focusRing-color;
 
-// *** Buttons ***
 $button-padding: $scaleDown-2 $scaleUp-1;
 $buttonHover-color: lighten($button-color, 5%);
 $buttonActive-color: darken($button-color, 5%);
