@@ -4,6 +4,10 @@
 
 ## December 2017
 
+### 0.4.1
+
+* Add build artifacts back to git ... after consideration, these could be helpful for copy/pasting directly from GitHub
+
 ### 0.4.0
 
 * Remove dependencies on fonts; now uses default sans-/serif fonts on client

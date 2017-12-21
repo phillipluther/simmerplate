@@ -7,7 +7,6 @@
 # production building
 /build
 /temp
-/css
 
 # misc
 .DS_Store
