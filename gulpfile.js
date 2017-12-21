@@ -7,9 +7,7 @@ var
         common: path.join(src, './simmerplate-common.scss'),
         normalize: path.resolve(__dirname, './node_modules/normalize.css/normalize.css'),
         sans: path.join(src, './simmerplate-sans.css'),
-        sansFont: path.resolve(__dirname, './fonts/Lato*.ttf'),
         serif: path.join(src, './simmerplate-serif.css'),
-        serifFont: path.resolve(__dirname, './fonts/ZillaSlab*.ttf'),
     },
     output = {
         css: path.resolve(__dirname, './css'),
@@ -146,16 +144,6 @@ gulp.task('build-prod', ['build-min', 'bundle']);
  * Bundling/Zipping
  */
 
-// helper functions to package up font and CSS files into a single archive; as
-// with the extendCommon method above we expect a variant of sans or serif
-function copyFont(variant) {
-    var
-        sourceKey = variant + 'Font',
-        outputPath = path.join(output.temp, './' + variant + '/fonts');
-
-    return gulp.src(source[sourceKey]).pipe(gulp.dest(outputPath));
-}
-
 function copyCss(variant) {
     var
         cssPattern = './simmerplate-' + variant + '*.css*',
@@ -176,28 +164,20 @@ function bundle(variant) {
 }
 
 /* ... sans ... */
-gulp.task('copy-sansFont', ['clean-temp'], function() {
-    return copyFont('sans');
-});
-
 gulp.task('copy-sansCss', ['build-min'], function() {
     return copyCss('sans');
 });
 
-gulp.task('bundle-sans', ['copy-sansFont', 'copy-sansCss'], function() {
+gulp.task('bundle-sans', ['copy-sansCss'], function() {
     return bundle('sans');
 });
 
 /* ... serif ... */
-gulp.task('copy-serifFont', ['clean-temp'], function() {
-    return copyFont('serif');
-});
-
 gulp.task('copy-serifCss', ['build-min'], function() {
     return copyCss('serif');
 });
 
-gulp.task('bundle-serif', ['copy-serifFont', 'copy-serifCss'], function() {
+gulp.task('bundle-serif', ['copy-serifCss'], function() {
     return bundle('serif');
 });
 
