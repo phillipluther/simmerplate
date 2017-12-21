@@ -2,6 +2,13 @@
 
 ---------------------------------
 
+## December 2017
+
+### 0.4.0
+
+* Remove dependencies on fonts; now uses default sans-/serif fonts on client
+* Remove build artifacts from git
+
 ## August 2017
 
 ### 0.3.0

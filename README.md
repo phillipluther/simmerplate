@@ -17,7 +17,7 @@ npm install --save simmerplate
 
 ```
 
-If you've got CSS and font loading set up in your project (from something like `create-react-app`, eg.) you can simply include it.
+Then simply include it.
 
 ```
 import 'simmerplate';
