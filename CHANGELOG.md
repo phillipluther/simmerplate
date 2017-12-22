@@ -4,6 +4,10 @@
 
 ## December 2017
 
+### 0.4.2
+
+* Added link styles to anchor tags (hover, focus, active).
+
 ### 0.4.1
 
 * Add build artifacts back to git ... after consideration, these could be helpful for copy/pasting directly from GitHub
