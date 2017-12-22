@@ -65,3 +65,6 @@ $rangeFocusThumb-color: $focusRing-color;
 $button-padding: $scaleDown-2 $scaleUp-1;
 $buttonHover-color: lighten($button-color, 5%);
 $buttonActive-color: darken($button-color, 5%);
+
+$linkHover-color: darken($link-color, 10%);
+$linkActive-color: lighten($link-color, 5%);

@@ -627,6 +627,25 @@ small {
   line-height: 1.60181em;
 }
 
+a {
+  text-decoration: none;
+  color: #47a;
+}
+
+a:hover,
+a:focus {
+  color: #355e86;
+}
+
+a:focus {
+  outline: 0;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #4f84b9;
+}
+
 /**
  * ============================================================================
  *

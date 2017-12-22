@@ -114,6 +114,21 @@ small {
     line-height: $scaleUp-4;
 }
 
+a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:hover,
+    &:focus { color: $linkHover-color; }
+
+    &:focus {
+        outline: 0;
+        text-decoration: underline;
+    }
+
+    &:active { color: $linkActive-color; }
+}
+
 /**
  * ============================================================================
  *
