@@ -5,11 +5,15 @@
   "main": "css/simmerplate-sans.css",
   "files": "css",
   "scripts": {
-    "build": "gulp build",
-    "build:prod": "gulp clean && gulp build-prod",
-    "gulp": "gulp",
-    "test": "gulp lint",
-    "watch": "gulp watch"
+    "clean": "rm -rf ./css",
+    "build:sans": "sass ./src/simmerplate-sans.scss ./css/simmerplate-sans.css",
+    "build:serif": "sass ./src/simmerplate-serif.scss ./css/simmerplate-serif.css",
+    "preminify:sans": "npm run build:sans",
+    "minify:sans": "cleancss -o ./css/simmerplate-sans.min.css ./css/simmerplate-sans.css",
+    "preminify:serif": "npm run build:serif",
+    "minify:serif": "cleancss -o ./css/simmerplate-serif.min.css ./css/simmerplate-serif.css",
+    "prebuild": "npm run clean",
+    "build": "npm run minify:sans && npm run minify:serif"
   },
   "keywords": [
     "typography",
@@ -23,28 +27,8 @@
   "repository": "https://github.com/phillipluther/simmerplate",
   "bugs": "https://github.com/phillipluther/simmerplate/issues",
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.7.0",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-refresh": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-stylelint": "^4.0.0",
-    "gulp-zip": "^4.0.0",
-    "normalize.css": "^7.0.0",
-    "stylelint": "^8.0.0",
-    "stylelint-config-sass-guidelines": "^3.1.0",
-    "stylelint-config-standard": "^17.0.0",
-    "stylelint-scss": "^1.5.1"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-sass-guidelines",
-    "rules": {
-      "indentation": 4,
-      "order/properties-alphabetical-order": null
-    }
+    "clean-css": "^5.1.5",
+    "clean-css-cli": "^5.3.3",
+    "sass": "^1.39.0"
   }
 }

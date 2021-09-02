@@ -2,6 +2,15 @@
 
 ---------------------------------
 
+## September 2021
+
+### 0.5.0
+
+* Whew ... been a while
+* Remove gulp and add (dart) Sass for a more modern'ish build process
+* Remove `css` (dist) folder from version control
+* Remove `downloads` folder altogether
+
 ## December 2017
 
 ### 0.4.2
