@@ -31,11 +31,6 @@ Simmerplate comes in a serif and sans-serif version. The default import is for s
 import 'simmerplate/css/simmerplate-serif.css';
 ```
 
-**Good ol' Copy/Paste or Download**
-
-You can manually grab the latest CSS and font files as handy archives [here](https://github.com/phillipluther/simmerplate/tree/master/downloads).
-
-
 ## Demo
 
 ... coming soon ...
