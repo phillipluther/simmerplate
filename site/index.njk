@@ -1,0 +1,18 @@
+{% set title = "Simmerplate" %}
+{% set description = "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate." %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+
+    <link rel="stylesheet" href="simmerplate.css" />
+  </head>
+  <body>
+    {% block content %}
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    {% endblock %>}
+  </body>
+</html>

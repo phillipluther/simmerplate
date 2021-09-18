@@ -3,11 +3,13 @@
   "version": "0.5.0",
   "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
   "main": "css/simmerplate-sans.css",
-  "files": ["css"],
+  "files": [
+    "css"
+  ],
   "scripts": {
     "clean": "rm -rf ./css",
-    "build:sans": "sass ./src/simmerplate-sans.scss ./css/simmerplate-sans.css",
-    "build:serif": "sass ./src/simmerplate-serif.scss ./css/simmerplate-serif.css",
+    "build:sans": "sass ./styles/simmerplate-sans.scss ./css/simmerplate-sans.css",
+    "build:serif": "sass ./styles/simmerplate-serif.scss ./css/simmerplate-serif.css",
     "preminify:sans": "npm run build:sans",
     "minify:sans": "cleancss -o ./css/simmerplate-sans.min.css ./css/simmerplate-sans.css",
     "preminify:serif": "npm run build:serif",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "clean-css": "^5.1.5",
     "clean-css-cli": "^5.3.3",
+    "nunjucks": "^3.2.3",
     "sass": "^1.39.0"
   }
 }
