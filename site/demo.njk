@@ -1,10 +1,96 @@
 {% extends "index.njk" %}
 
 {% block content %}
-<h1>The Quick Brown Fox Jumps Over the Lazy Dog</h1>
-<h2>The Quick Brown Fox Jumps Over the Lazy Dog</h2>
-<h3>The Quick Brown Fox Jumps Over the Lazy Dog</h3>
-<h4>The Quick Brown Fox Jumps Over the Lazy Dog</h4>
-<h5>The Quick Brown Fox Jumps Over the Lazy Dog</h5>
-<h6>The Quick Brown Fox Jumps Over the Lazy Dog</h6>
+<header>
+  <h1>Simmerplate Demo</h1>
+  <p>Here's a simple page displaying <em>almost</em> every HTML tag. The only stylesheet used in this demo comes from Simmerplate; in other words, there are no external styles applied so it's a great example of Simmerplate in action!</p>
+  <nav>
+    <ul>
+      <li><a href="#headings">Headings</a></li>
+      <li>
+        <a href="#headings">Form Elements</a>
+        <ul>
+          <li><a href="#textFields">Text-link Inputs</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<article id="text">
+  <h2 class="section-heading">Text</h2>
+
+  <section id="headings">
+    <h3 class="section-sub-heading">Headings</h3>
+
+    <h1>The Quick Brown Fox Jumps Over the Lazy Dog</h1>
+    <h2>The Quick Brown Fox Jumps Over the Lazy Dog</h2>
+    <h3>The Quick Brown Fox Jumps Over the Lazy Dog</h3>
+    <h4>The Quick Brown Fox Jumps Over the Lazy Dog</h4>
+    <h5>The Quick Brown Fox Jumps Over the Lazy Dog</h5>
+    <h6>The Quick Brown Fox Jumps Over the Lazy Dog</h6>
+  </section>
+
+  <section id="text">
+    <h3 class="section-sub-heading">Paragraphs</h3>
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque orci quis est volutpat, at volutpat sapien congue.</p>
+    
+    <p>Ut nec ante ac metus eleifend pretium rhoncus quis metus. Mauris ullamcorper, diam ut ullamcorper vestibulum, neque sem ullamcorper odio, nec maximus neque velit at elit. Donec id luctus ligula. Nunc mattis convallis mauris, eu sagittis neque.</p>
+    
+    <p>Vestibulum ultricies tincidunt ipsum, vitae rhoncus libero mollis vitae. Fusce mauris odio, iaculis eget vehicula eu, faucibus id elit.</p>
+
+    <p>Ut et hendrerit ligula, quis ullamcorper ligula. In rhoncus nibh quis odio egestas commodo. Aliquam elit nisi, ultricies in ligula at, iaculis pellentesque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus placerat purus dolor, et commodo sem luctus eget. Ut malesuada felis a tristique accumsan. Suspendisse potenti. Donec laoreet dolor massa, in efficitur sem semper nec. In egestas eros ac aliquet accumsan. Pellentesque porttitor turpis vulputate ex ultrices, vitae tempus erat tincidunt. Ut dignissim quis quam sed semper.</p>
+  </section>
+
+  <section id="textStyles">
+    <h3 class="section-sub-heading">Text Styles</h3>
+
+    <p><em>This text is italic, styled with the &rbrack;em&lbrack; tag.</em></p>
+    <p><i>This text is italic, styled with the &rbrack;i&lbrack; tag.</i></p>
+    <p><strong>This text is bold, styled with the &rbrack;strong&lbrack; tag.</strong></p>
+    <p><b>This text is bold, styled with the &rbrack;b&lbrack; tag.</b></p>
+  </section>
+</article>
+
+<article id="forms">
+  <h2 class="section-heading">Form Elements</h2>
+
+  <section id="textFields">
+    <h3 class="section-sub-heading">Text-like Inputs</h3>
+
+    <label for="dateInput">Date Input</label>
+    <input type="date" id="dateInput" />
+
+    <label for="datetimeInput">Datetime-local Input</label>
+    <input type="datetime-local" id="datetimeInput" />
+
+    <label for="emailInput">Email Input</label>
+    <input type="email" id="emailInput" />
+
+    <label for="monthInput">Month Input</label>
+    <input type="month" id="monthInput" />
+
+    <label for="numberInput">Number Input</label>
+    <input type="number" id="numberInput" />
+
+    <label for="passwordInput">Password Input</label>
+    <input type="password" id="passwordInput" />
+
+    <label for="searchInput">Search Input</label>
+    <input type="search" id="searchInput" />
+
+    <label for="telInput">Telephone (Tel) Input</label>
+    <input type="tel" id="telInput" />
+
+    <label for="textInput">Text Input</label>
+    <input type="text" id="textInput" />
+
+    <label for="timeInput">Time Input</label>
+    <input type="time" id="timeInput" />
+
+    <label for="urlInput">URL Input</label>
+    <input type="url" id="urlInput" />
+  </section>
+</article>
 {% endblock %}

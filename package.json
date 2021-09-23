@@ -15,7 +15,8 @@
     "preminify:serif": "npm run build:serif",
     "minify:serif": "cleancss -o ./css/simmerplate-serif.min.css ./css/simmerplate-serif.css",
     "prebuild": "npm run clean",
-    "build": "npm run minify:sans && npm run minify:serif"
+    "build": "npm run minify:sans && npm run minify:serif",
+    "build:demo": "node scripts/build-demo"
   },
   "keywords": [
     "typography",
