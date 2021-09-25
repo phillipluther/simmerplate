@@ -10,7 +10,7 @@
     "clean": "rm -rf ./css ./public",
     "build:styles": "node scripts/build-stylesheets",
     "build:demo": "node scripts/build-demo",
-    "build": "npm run build:demo && npm run build:styles",
+    "build": "npm run build:styles && npm run build:demo",
     "prebuild": "npm run clean"
   },
   "keywords": [
