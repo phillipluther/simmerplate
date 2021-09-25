@@ -8,6 +8,7 @@ const destPath = path.resolve('public');
 nunjucks.configure(srcPath, {
   autoescape: true,
   trimBlocks: true,
+  lstripBlocks: true,
 });
 
 if (fs.existsSync(destPath)) {
