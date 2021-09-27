@@ -1,5 +1,7 @@
 # Simmerplate
 
+> **NOTE:** This project is going through significant changes, often on the `main` branch. The version published to NPM is stable and tagged `0.5.0`
+
 A "good enough" UI baseline so you can focus on development. It's not quite a boilerplate.
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
