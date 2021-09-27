@@ -2,15 +2,23 @@
 
 {% block content %}
 <header>
-  <h1>Simmerplate Demo</h1>
-  <p>Here's a simple page displaying <em>almost</em> every HTML tag. The only stylesheet used in this demo comes from Simmerplate; in other words, there are no external styles applied so it's a great example of Simmerplate in action!</p>
+  <h1>Simmerplate Demo (EDIT)</h1>
+  <p>Here's a simple Simmperplate demo page displaying <em>almost</em> every HTML tag.</p>
   <nav>
     <ul>
-      <li><a href="#headings">Headings</a></li>
       <li>
-        <a href="#headings">Form Elements</a>
+        <a href="#text">Text</a>
         <ul>
-          <li><a href="#textFields">Text-link Inputs</a></li>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#paragraphs">Paragraphs</a></li>
+          <li><a href="#textStyles">Text Styles</a></li>
+          <li><a href="#textDemo">Mixed/Realistic Text Demo</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#forms">Form Elements</a>
+        <ul>
+          <li><a href="#textFields">Text and Textlike Inputs</a></li>
         </ul>
       </li>
     </ul>
@@ -18,21 +26,19 @@
 </header>
 
 <article id="text">
-  <h2 class="section-heading">Text</h2>
+  <h2>Text</h2>
 
   <section id="headings">
-    <h3 class="section-sub-heading">Headings</h3>
-
-    <h1>The Quick Brown Fox Jumps Over the Lazy Dog</h1>
-    <h2>The Quick Brown Fox Jumps Over the Lazy Dog</h2>
-    <h3>The Quick Brown Fox Jumps Over the Lazy Dog</h3>
-    <h4>The Quick Brown Fox Jumps Over the Lazy Dog</h4>
-    <h5>The Quick Brown Fox Jumps Over the Lazy Dog</h5>
-    <h6>The Quick Brown Fox Jumps Over the Lazy Dog</h6>
+    <h1>&lt;h1&gt;The Quick Brown Fox Jumps Over the Lazy Dog&lt;/h1&gt;</h1>
+    <h2>&lt;h2&gt;The Quick Brown Fox Jumps Over the Lazy Dog&lt;/h2&gt;</h2>
+    <h3>&lt;h3&gt;The Quick Brown Fox Jumps Over the Lazy Dog&lt;/h3&gt;</h3>
+    <h4>&lt;h4&gt;The Quick Brown Fox Jumps Over the Lazy Dog&lt;/h4&gt;</h4>
+    <h5>&lt;h5&gt;The Quick Brown Fox Jumps Over the Lazy Dog&lt;/h5&gt;</h5>
+    <h6>&lt;h6&gt;The Quick Brown Fox Jumps Over the Lazy Dog&lt;/h6&gt;</h6>
   </section>
 
-  <section id="text">
-    <h3 class="section-sub-heading">Paragraphs</h3>
+  <section id="paragraphs">
+    <h3>Paragraphs</h3>
 
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque orci quis est volutpat, at volutpat sapien congue.</p>
     
@@ -44,20 +50,62 @@
   </section>
 
   <section id="textStyles">
-    <h3 class="section-sub-heading">Text Styles</h3>
+    <h3>Text Styles</h3>
 
-    <p><em>This text is italic, styled with the &rbrack;em&lbrack; tag.</em></p>
-    <p><i>This text is italic, styled with the &rbrack;i&lbrack; tag.</i></p>
-    <p><strong>This text is bold, styled with the &rbrack;strong&lbrack; tag.</strong></p>
-    <p><b>This text is bold, styled with the &rbrack;b&lbrack; tag.</b></p>
+    <p><em>This text is italic, styled with the &lt;em&gt; tag.</em></p>
+    <p><i>This text is italic, styled with the &lt;i&gt; tag.</i></p>
+    <p><strong>This text is bold, styled with the &lt;strong&gt; tag.</strong></p>
+    <p><b>This text is bold, styled with the &lt;b&gt; tag.</b></p>
+  </section>
+
+  <section id="textDemo">
+    <h3>Mixed/Realistic Text Demo</h3>
+    <article>
+      <h1>This is a Page Title</h1>
+      <p>This is an paragraph as the fist-child of an H1; it's got special styling since it's assumed to be a descriptive subtitle.</p>
+
+      <h2>Another Fox Jumping Lazy Dogs</h2>
+      <p>Ut et hendrerit ligula, quis ullamcorper ligula. In rhoncus nibh quis odio egestas commodo. Aliquam elit nisi, ultricies in ligula at, iaculis pellentesque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus placerat purus dolor, et commodo sem luctus eget.</p>
+      <p>Ut malesuada felis a tristique accumsan. Suspendisse potenti. Donec laoreet dolor massa, in efficitur sem semper nec. In egestas eros ac aliquet accumsan. Pellentesque porttitor turpis vulputate ex ultrices, vitae tempus erat tincidunt. Ut dignissim quis quam sed semper.</p>
+
+      <h2>This Time, the Lazy Dog Jumps Over the Quick Brown Fox!</h2>      
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque orci quis est volutpat, at volutpat sapien congue.</p>
+
+      <h3>Curse That Lazy Dog</h3>
+      <p>Ut nec ante ac metus eleifend pretium rhoncus quis metus. Mauris ullamcorper, diam ut ullamcorper vestibulum, neque sem ullamcorper odio, nec maximus neque velit at elit. Donec id luctus ligula. Nunc mattis convallis mauris, eu sagittis neque.</p>
+
+      <h3>It's Jumping the Quick Brown Fox</h3>
+      <p>Vestibulum ultricies tincidunt ipsum, vitae rhoncus libero mollis vitae. Fusce mauris odio, iaculis eget vehicula eu, faucibus id elit.</p>
+
+      <h4>I Wonder About Red Foxes</h4>
+      <p>Ut et hendrerit ligula, quis ullamcorper ligula. In rhoncus nibh quis odio egestas commodo. Aliquam elit nisi, ultricies in ligula at, iaculis pellentesque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus placerat purus dolor, et commodo sem luctus eget.</p>
+
+      <h4>Red Foxes Might be Quicker Than Brown Foxes</h4>
+      <p>Ut malesuada felis a tristique accumsan. Suspendisse potenti. Donec laoreet dolor massa, in efficitur sem semper nec. In egestas eros ac aliquet accumsan. Pellentesque porttitor turpis vulputate ex ultrices, vitae tempus erat tincidunt. Ut dignissim quis quam sed semper.</p>
+
+      <h5>After All; That Would Negate the Entire Premise</h5>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque orci quis est volutpat, at volutpat sapien congue.</p>
+
+      <h6>Maybe; Not Sure About That</h6>
+      <p>Ut malesuada felis a tristique accumsan. Suspendisse potenti. Donec laoreet dolor massa, in efficitur sem semper nec. In egestas eros ac aliquet accumsan. Pellentesque porttitor turpis vulputate ex ultrices, vitae tempus erat tincidunt. Ut dignissim quis quam sed semper.</p>
+
+      <h6>Will Need to Look into it a Bit Further</h6>
+      <p>Ut nec ante ac metus eleifend pretium rhoncus quis metus. Mauris ullamcorper, diam ut ullamcorper vestibulum, neque sem ullamcorper odio, nec maximus neque velit at elit. Donec id luctus ligula. Nunc mattis convallis mauris, eu sagittis neque.</p>
+
+      <h4>This is Most Likely Irrelevant</h4>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque orci quis est volutpat, at volutpat sapien congue.</p>
+
+      <h3>All Good; Let's Wrap it Up</h3>
+      <p>Ut nec ante ac metus eleifend pretium rhoncus quis metus. Mauris ullamcorper, diam ut ullamcorper vestibulum, neque sem ullamcorper odio, nec maximus neque velit at elit. Donec id luctus ligula. Nunc mattis convallis mauris, eu sagittis neque.</p>
+    </article>
   </section>
 </article>
 
 <article id="forms">
-  <h2 class="section-heading">Form Elements</h2>
+  <h2>Form Elements</h2>
 
   <section id="textFields">
-    <h3 class="section-sub-heading">Text-like Inputs</h3>
+    <h3>Text and Textlike Inputs</h3>
 
     <label for="dateInput">Date Input</label>
     <input type="date" id="dateInput" />

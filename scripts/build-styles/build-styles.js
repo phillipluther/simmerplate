@@ -9,20 +9,22 @@ const sansDest = path.join(destPath, 'simmerplate-sans.css');
 const serifSrc = path.join(stylesPath, 'simmerplate-serif.scss');
 const serifDest = path.join(destPath, 'simmerplate-serif.css');
 
-if (fs.existsSync(destPath)) {
-  fs.rmSync(destPath, { recursive: true });
+module.exports = () => {
+  if (fs.existsSync(destPath)) {
+    fs.rmSync(destPath, { recursive: true });
+  }
+  fs.mkdirSync(destPath);
+
+  const sansContent = sass.renderSync({
+    file: sansSrc,
+    outputStyle: 'compressed',
+  });
+
+  const serifContent = sass.renderSync({
+    file: serifSrc,
+    outputStyle: 'compressed',
+  });
+
+  fs.writeFileSync(sansDest, sansContent.css);
+  fs.writeFileSync(serifDest, serifContent.css);
 }
-fs.mkdirSync(destPath);
-
-const sansContent = sass.renderSync({
-  file: sansSrc,
-  outputStyle: 'compressed',
-});
-
-const serifContent = sass.renderSync({
-  file: serifSrc,
-  outputStyle: 'compressed',
-});
-
-fs.writeFileSync(sansDest, sansContent.css);
-fs.writeFileSync(serifDest, serifContent.css);

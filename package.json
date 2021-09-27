@@ -8,10 +8,11 @@
   ],
   "scripts": {
     "clean": "rm -rf ./css ./public",
-    "build:styles": "node scripts/build-stylesheets",
-    "build:demo": "node scripts/build-demo",
-    "build": "npm run build:styles && npm run build:demo",
-    "prebuild": "npm run clean"
+    "build:styles": "node scripts/build-styles",
+    "build:site": "node scripts/build-site",
+    "build": "npm run build:styles && npm run build:site",
+    "prebuild": "npm run clean",
+    "dev": "node scripts/dev-server"
   },
   "keywords": [
     "typography",
@@ -25,6 +26,10 @@
   "repository": "https://github.com/phillipluther/simmerplate",
   "bugs": "https://github.com/phillipluther/simmerplate/issues",
   "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "chokidar": "^3.5.2",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
     "nunjucks": "^3.2.3",
     "sass": "^1.39.0"
   }

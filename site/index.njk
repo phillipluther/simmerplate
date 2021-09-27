@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="simmerplate-sans.css" />
   </head>
   <body>
-    {% block content %}
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-    {% endblock %}
+    <main style="max-width:810px;margin:0 auto;">
+      {% block content %}
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      {% endblock %}
+    </main>
   </body>
 </html>
