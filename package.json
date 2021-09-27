@@ -10,9 +10,13 @@
     "clean": "rm -rf ./css ./public",
     "build:styles": "node scripts/build-styles",
     "build:site": "node scripts/build-site",
-    "build": "npm run build:styles && npm run build:site",
+    "build": "run-s build:styles build:site",
+    "dev": "run-p watch:styles watch:site serve",
     "prebuild": "npm run clean",
-    "dev": "node scripts/dev-server"
+    "predev": "run-s clean build",
+    "serve": "node scripts/dev-server",
+    "watch:site": "nunjucks *.njk -p site -o public -w",
+    "watch:styles": "sass styles/simmerplate-sans.scss:public/simmerplate-sans.css styles/simmerplate-serif.scss:public/simmerplate-serif.css --watch"
   },
   "keywords": [
     "typography",
@@ -26,13 +30,12 @@
   "repository": "https://github.com/phillipluther/simmerplate",
   "bugs": "https://github.com/phillipluther/simmerplate/issues",
   "devDependencies": {
-    "browser-sync": "^2.27.5",
-    "chokidar": "^3.5.2",
     "connect-livereload": "^0.6.1",
-    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "livereload": "^0.9.3",
+    "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.3",
+    "nunjucks-cli": "^1.0.0",
     "sass": "^1.39.0"
   }
 }

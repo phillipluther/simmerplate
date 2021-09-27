@@ -2,27 +2,25 @@ const express = require('express');
 const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 const path = require('path');
-const { configure: configureNunjucks } = require('./build-site/build-site');
+
+const publicPath = path.join(__dirname, '../public');
 
 const app = express();
-const livereloadServer = livereload.createServer();
-
-livereloadServer.watch(path.join(__dirname, '../public'));
-
 app.use(connectLivereload());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(publicPath));
 
-configureNunjucks({
-  express: app,
-  noCache: false,
-  watch: true,
-});
+const livereloadServer = livereload.createServer();
+livereloadServer.watch(publicPath);
 
-app.get('/', (req, res) => {
-  res.render('index.njk', {});
-});
+app.get('/:page', (req, res) => {
+  const { page = 'index' } = req.params;
 
-app.get('/demo', (req, res) => {
-  res.render('demo.njk');
+  try {
+    res.sendFile(path.join(publicPath, `${page}.html`));
+  } catch (e) {
+    console.error(e);
+  }
 });
 
 app.listen(8000, () => {
