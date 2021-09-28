@@ -18,7 +18,10 @@
       <li>
         <a href="#forms">Form Elements</a>
         <ul>
+          <li><a href="#buttons">Buttons and Buttonlike Inputs</a></li>
           <li><a href="#textFields">Text and Textlike Inputs</a></li>
+          <li><a href="#checkboxes">Checkboxes</a></li>
+          <li><a href="#radioButtons">Radio Buttons</a></li>
         </ul>
       </li>
     </ul>
@@ -104,8 +107,32 @@
 <article id="forms">
   <h2>Form Elements</h2>
 
+  <section id="buttons">
+    <h3>Buttons and Buttonlike Inputs</h3>
+
+    <div>
+      <input type="button" name="button_input" value="Button Input" />
+    </div>
+    <div>
+      <input type="reset" name="reset_button" value="Reset Input" />
+    </div>
+    <div>
+      <input type="submit" name="submit_button" value="A Submit Input" />
+    </div>
+
+    <div>
+      <button type="button">A Standard Button</button>
+    </div>
+    <div>
+      <button type="reset">A Reset Button</button>
+    </div>
+    <div>
+      <button type="submit">A Submit Button</button>
+    </div>
+  </section>
+
   <section id="textFields">
-    <h3>Text and Textlike Inputs</h3>
+    <h3>Text and Textlike Inputs (with Labels!)</h3>
 
     <label for="dateInput">Date Input</label>
     <input type="date" id="dateInput" />
@@ -139,6 +166,41 @@
 
     <label for="urlInput">URL Input</label>
     <input type="url" id="urlInput" />
+
+    <label for="weekInput">Week Input</label>
+    <input type="week" id="weekInput" />
   </section>
+
+  <section id="checkboxes">
+    <h3>Checkboxes</h3>
+
+    <div>
+      <input type="checkbox" id="checkboxOne">
+      <label for="checkboxOne">Checkbox Input</label>
+    </div>
+    <div>
+      <input type="checkbox" id="checkboxTwo" checked>
+      <label for="checkboxTwo">Checkbox Input (Checked)
+    </div>
+  </section>
+
+  <section id="radioButtons">
+    <h3>Radio Buttons</h3>
+    <p>These radio buttons, acting as a single unit, appear in a &lt;fieldset&gt; tag and are labeled with a &lt;legend&gt;.</p>
+
+    <fieldset>
+      <legend>Select One</legend>
+
+      <input type="radio" name="checkbox" id="radioOne">
+      <label for="radioOne">Radio Button Option 1</label>
+
+      <input type="radio" name="checkbox" id="radioTwo" checked>
+      <label for="radioTwo">Radio Button Option 2</label>
+
+      <input type="radio" name="checkbox" id="radioThree">
+      <label for="radioThree">Radio Button Option 3</label>
+    </fieldset>
+  </section>
+
 </article>
 {% endblock %}
