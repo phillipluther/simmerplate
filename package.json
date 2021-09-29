@@ -11,11 +11,10 @@
     "build:styles": "node scripts/build-styles",
     "build:site": "node scripts/build-site",
     "build": "run-s build:styles build:site",
-    "dev": "run-p watch:styles watch:site serve",
+    "dev": "run-p watch:styles dev:serve",
+    "dev:serve": "node scripts/dev-server",
     "prebuild": "npm run clean",
     "predev": "run-s clean build",
-    "serve": "node scripts/dev-server",
-    "watch:site": "nunjucks *.njk -p site -o public -w",
     "watch:styles": "sass styles/simmerplate-sans.scss:public/simmerplate-sans.css styles/simmerplate-serif.scss:public/simmerplate-serif.css --watch"
   },
   "keywords": [
@@ -34,8 +33,6 @@
     "express": "^4.17.1",
     "livereload": "^0.9.3",
     "npm-run-all": "^4.1.5",
-    "nunjucks": "^3.2.3",
-    "nunjucks-cli": "^1.0.0",
     "sass": "^1.39.0"
   }
 }
