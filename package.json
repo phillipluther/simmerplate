@@ -14,8 +14,8 @@
     "dev": "run-p watch:styles dev:serve",
     "dev:serve": "node scripts/dev-server",
     "prebuild": "npm run clean",
-    "predev": "run-s clean build",
-    "watch:styles": "sass styles/simmerplate-sans.scss:public/simmerplate-sans.css styles/simmerplate-serif.scss:public/simmerplate-serif.css --watch"
+    "predev": "npm run clean",
+    "watch:styles": "sass styles/simmerplate-sans.scss:css/simmerplate-sans.css styles/simmerplate-serif.scss:css/simmerplate-serif.css --watch"
   },
   "keywords": [
     "typography",
