@@ -1,0 +1,20 @@
+/**
+ * Responsive breakpoints; currently supports 3 breakpoints that roughly
+ * equate to phone, tablet, and "desktop monitor" 
+ */
+$screen-size-md: 768px;
+$screen-size-lg: 1280px;
+
+/**
+ * Used to set the base font size unit (on the HTML tag), the basis for all
+ * relative sizes downstream; affects anything sized by `rem`
+ */
+$font-size-base: 1em;
+$font-size-base-md: 1.1em;
+$font-size-base-lg: 1.2em;
+
+/**
+ * The stepping unit of our type scale; affects both font sizes and margins for
+ * text elements like `p` tags and headings.
+ */
+$font-size-scale: 1.2;

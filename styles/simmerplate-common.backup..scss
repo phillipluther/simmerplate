@@ -1,0 +1,641 @@
+/*! Simmerplate | MIT License | github.com/phillipluther/simmerplate */
+
+@import "./core/derived";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $textBase-min;
+  font-weight: normal;
+  line-height: $text-lineHeight;
+}
+
+/**
+ * ============================================================================
+ *
+ * Headings
+ *
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: $heading-margins;
+}
+
+/*
+ * If a heading is the first child in a node, give it the standard margin up
+ * top; the intent here is that it'll appear inside a container ... a card or a
+ * banner or the like ... which will probably have its own padding/margins
+ */
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $heading-lineHeight;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $scaleUp-5;
+}
+h2 {
+  font-size: $scaleUp-4;
+}
+h3 {
+  font-size: $scaleUp-3;
+}
+h4 {
+  font-size: $scaleUp-2;
+}
+h5 {
+  font-size: $scaleUp-1;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/**
+ * ============================================================================
+ *
+ * Text and Related Styling
+ *
+ */
+
+/*
+ * If a paragraph immediately follows an H1, we assume it's an introductory
+ * blurb or capsule summary. We give it a little extra flavor to make it stand
+ * out.
+ */
+h1 + p {
+  font-size: $scaleUp-1;
+  font-style: italic;
+  line-height: $scaleUp-3;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: $text-spacing;
+}
+
+/*
+ * Just as with first-child headings above, we shave the margin from paragraphs
+ * appearing as the last-child in a container.
+ */
+p:last-child,
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: $text-spacing;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+small {
+  display: inline-block;
+  font-size: $text-small;
+  line-height: $scaleUp-4;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $linkHover-color;
+  }
+
+  &:focus {
+    outline: 0;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $linkActive-color;
+  }
+}
+
+/**
+ * ============================================================================
+ *
+ * Code/Pre Styles
+ *
+ * The background and borders on our code-formatting blocks are best guesses
+ * for something that'll work on either a light or dark theme. Not perfect, but
+ * in the absence of knowing what this'll appear on it's fine enough.
+ */
+pre {
+  overflow: auto;
+  margin: $text-spacing 0;
+  padding: 1em $scaleDown-3;
+  border: 1px solid $codeBorder-color;
+}
+
+pre:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  display: inline-block;
+  padding: 0 (1 - $scaleDown-3);
+}
+
+pre {
+  background: $codeBg-color;
+}
+code {
+  background: $codeInline-color;
+}
+
+pre > code {
+  background: transparent;
+}
+
+/*
+ * A general divider reset. Like the border color of our pre/code blocks, we
+ * make a best guess for color that'll work'ish on both light and dark themes.
+ */
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: $scaleUp-7 0;
+  background: $divider-color;
+}
+
+/**
+ * ============================================================================
+ *
+ * Form Elements
+ *
+ */
+legend,
+label {
+  display: block;
+  font-size: $text-small;
+  font-weight: 700;
+}
+
+label {
+  margin-bottom: $scaleDown-5;
+}
+
+fieldset {
+  padding: $input-padding $input-padding 0;
+  background: $inputBg-color;
+  border: $input-borderWidth solid $borderLight-color;
+}
+
+/* common to all inputs */
+input,
+select,
+textarea,
+fieldset {
+  font-family: inherit;
+  margin: 0 0 $text-spacing;
+}
+
+@mixin placeholder-text {
+  color: $placeholder-color;
+  font-style: italic;
+}
+
+/* general placeholder styles */
+/* stylelint-disable */
+::-webkit-input-placeholder {
+  @include placeholder-text;
+}
+::-moz-placeholder {
+  @include placeholder-text;
+}
+:-ms-input-placeholder {
+  @include placeholder-text;
+}
+/* stylelint-enable */
+
+/* text'ish input types ... a general bordered box */
+[type="text"],
+[type="email"],
+[type="password"],
+[type="search"],
+[type="url"],
+[type="month"],
+[type="week"],
+[type="date"],
+[type="time"],
+[type="datetime-local"],
+[type="number"],
+[type="tel"],
+[type="file"],
+[type="color"],
+select,
+textarea {
+  display: block;
+  border-right: $input-borderWidth solid $borderLight-color;
+  border-bottom: $input-borderWidth solid $borderHeavy-color;
+  border-left: $input-borderWidth solid $borderLight-color;
+  border-top: $input-borderWidth solid $borderLight-color;
+  font-size: $scaleUp-1;
+}
+
+/* full-width inputs */
+[type="text"],
+[type="email"],
+[type="password"],
+[type="search"],
+[type="url"],
+[type="month"],
+[type="week"],
+[type="date"],
+[type="time"],
+[type="datetime-local"],
+[type="number"],
+[type="tel"],
+[type="file"] {
+  width: 100%;
+  padding: $input-padding;
+  background: $inputBg-color;
+}
+
+/* Button'ish input types */
+[type="submit"],
+[type="reset"],
+[type="button"] {
+  cursor: pointer; /* odd that browsers don't do this */
+  padding: $button-padding;
+  border: $input-borderWidth solid $buttonBorder-color;
+  transition: background-color $transitionTiming-fast;
+}
+
+[type="submit"] {
+  background: $button-color;
+  color: $buttonText-color;
+}
+
+[type="reset"],
+[type="button"] {
+  background: transparent;
+}
+
+[type="submit"]:hover,
+[type="reset"]:hover,
+[type="button"]:hover {
+  background: $buttonHover-color;
+}
+
+[type="submit"]:active,
+[type="reset"]:active,
+[type="button"]:active {
+  background: $buttonActive-color;
+}
+
+/* file type button'ish styling */
+[type="file"]::-webkit-file-upload-button {
+  background: $button-color;
+  border: 0;
+  margin: -$input-padding 0 -$input-padding;
+  padding: $input-padding;
+  transition: background-color $transitionTiming-fast;
+  cursor: pointer;
+}
+
+[type="file"]::-webkit-file-upload-button:hover {
+  background: $buttonHover-color;
+}
+[type="file"]::-webkit-file-upload-button:active {
+  background: $buttonActive-color;
+}
+[type="file"]::-webkit-file-upload-button:focus {
+  outline: 0;
+}
+
+/* slider styles ... broken down in this granular fashion for browser
+ * compatibility reasons
+ */
+[type="range"] {
+  width: 100%;
+  height: $range-thumbSize;
+  padding: 0;
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+@mixin range-track-styles() {
+  width: calc(100% - (#{$input-borderWidth} * 2));
+  height: calc(#{$range-trackHeight} - (#{$input-borderWidth}));
+  cursor: pointer;
+  border: $input-borderWidth solid $rangeTrackBorder-color;
+  border-radius: ceil($range-trackHeight / 2);
+  background: $rangeTrack-color;
+  transition: background-color 180ms;
+}
+
+@mixin range-thumb-styles(
+  $marginTop: -
+    (
+      $range-thumbSize / 4,
+    )
+) {
+  $border-offset: $input-borderWidth * 2;
+
+  border: $input-borderWidth solid $rangeThumbBorder-color;
+  height: calc(#{$range-thumbSize} - #{$border-offset});
+  width: calc(#{$range-thumbSize} - #{$border-offset});
+  border-radius: 50%;
+  background: $rangeThumb-color;
+  cursor: pointer;
+  margin-top: $marginTop;
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+@mixin range-focus-thumb-styles() {
+  border-color: $rangeFocusThumb-color;
+  background: $rangeFocusThumb-color;
+}
+
+@mixin range-track-disabled-styles() {
+  background: #fff linear-gradient(0deg, #fff, $inputBg-color);
+  border-color: $inputDisabledBorder-color;
+  cursor: not-allowed;
+}
+
+[type="range"]::-webkit-slider-runnable-track {
+  @include range-track-styles;
+}
+[type="range"]::-webkit-slider-thumb {
+  @include range-thumb-styles;
+}
+[type="range"]:focus::-webkit-slider-runnable-track {
+  background: $rangeFocusTrack-color;
+}
+[type="range"]:focus::-webkit-slider-thumb {
+  @include range-focus-thumb-styles;
+}
+
+[type="range"]::-moz-range-track {
+  @include range-track-styles;
+}
+[type="range"]::-moz-range-thumb {
+  @include range-thumb-styles;
+}
+[type="range"]:focus::-moz-range-track {
+  background: $rangeFocusTrack-color;
+}
+[type="range"]:focus::-moz-range-thumb {
+  @include range-focus-thumb-styles;
+}
+
+[type="range"]::-ms-track {
+  @include range-track-styles;
+}
+[type="range"]::-ms-thumb {
+  @include range-thumb-styles(0);
+}
+[type="range"]:focus::-ms-track {
+  background: $rangeFocusTrack-color;
+}
+[type="range"]:focus::-ms-thumb {
+  @include range-focus-thumb-styles;
+}
+
+[type="range"]::-ms-fill-upper,
+[type="range"]::-ms-fill-lower {
+  display: none;
+}
+
+/* Color Inputs */
+[type="color"] {
+  background: transparent;
+  width: $input-height;
+  height: $input-height;
+  padding: $input-borderWidth * 2;
+  cursor: pointer;
+}
+
+select,
+textarea {
+  padding: $input-padding;
+  background: $inputBg-color;
+}
+
+select {
+  width: 100%;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  line-height: $text-lineHeight;
+  min-height: $text-lineHeight * 4;
+}
+
+/* stylelint-disable */
+textarea[cols] {
+  width: auto;
+}
+textarea[rows] {
+  height: auto;
+}
+/* stylelint-enable */
+
+/* Checkbox and Radio special handling */
+
+/* this is important and hard-coded; we use it to style a (sane) use-case
+   where the label follows the input */
+$check-radio-offset: 2em;
+
+[type="radio"],
+[type="checkbox"] {
+  width: $check-radio-offset;
+}
+
+[type="radio"] + label,
+[type="checkbox"] + label {
+  width: 100%;
+  display: inline-block;
+  font-size: $scaleUp-1;
+  font-weight: 400;
+  margin-left: -$check-radio-offset;
+  padding-left: $check-radio-offset;
+  cursor: pointer;
+}
+
+[type="radio"]:focus + label,
+[type="checkbox"]:focus + label {
+  outline: $input-focusRingWidth solid $focusRing-color;
+}
+
+/* Focus Management ... or at Least, Handling */
+[type="text"]:focus,
+[type="email"]:focus,
+[type="password"]:focus,
+[type="search"]:focus,
+[type="url"]:focus,
+[type="month"]:focus,
+[type="week"]:focus,
+[type="date"]:focus,
+[type="time"]:focus,
+[type="datetime-local"]:focus,
+[type="number"]:focus,
+[type="tel"]:focus,
+[type="file"]:focus,
+[type="image"]:focus,
+[type="color"]:focus,
+[type="submit"]:focus,
+[type="reset"]:focus,
+[type="button"]:focus,
+[type="image"]:focus,
+select:focus,
+textarea:focus {
+  outline: $input-focusRingWidth solid $focusRing-color;
+}
+
+[type="radio"]:focus,
+[type="checkbox"]:focus,
+[type="range"]:focus {
+  outline: none;
+}
+
+[disabled],
+[type="radio"]:disabled + label,
+[type="checkbox"]:disabled + label {
+  color: $inputDisabled-color;
+  border-color: $inputDisabledBorder-color;
+  cursor: not-allowed;
+}
+
+[disabled],
+[disabled]:hover,
+[disabled]:active {
+  background: #fff linear-gradient(0deg, #fff, $inputBg-color);
+}
+
+[type="range"]:disabled {
+  background: transparent;
+}
+
+[type="range"]:disabled::-webkit-slider-runnable-track {
+  @include range-track-disabled-styles;
+}
+[type="range"]:disabled::-webkit-slider-thumb {
+  @include range-track-disabled-styles;
+}
+[type="range"]:disabled::-moz-range-track {
+  @include range-track-disabled-styles;
+}
+[type="range"]:disabled::-moz-range-thumb {
+  @include range-track-disabled-styles;
+}
+[type="range"]:disabled::-ms-track {
+  @include range-track-disabled-styles;
+}
+[type="range"]:disabled::-ms-thumb {
+  @include range-track-disabled-styles;
+}
+
+[type="file"]:disabled::-webkit-file-upload-button {
+  background: $inputBg-color;
+  border-right: 1px solid $borderLight-color;
+  color: inherit;
+  cursor: not-allowed;
+}
+
+/**
+ * ============================================================================
+ *
+ * "Small" Screens
+ *
+ * We kick up the font-size but don't re-scale our relative spacing. Things
+ * open up naturally from the underlying text size on all our ems.
+ *
+ */
+@media screen and (min-width: $layout-sm) {
+  body {
+    font-size: $textBase-sm;
+  }
+}
+
+/**
+ * ============================================================================
+ *
+ * "Medium" Screens
+ *
+ * We kick up the font-size but don't re-scale our relative spacing. Things
+ * open up naturally from the underlying text size on all our ems.
+ *
+ */
+@media screen and (min-width: $layout-md) {
+  body {
+    font-size: $textBase-md;
+  }
+}
+
+/**
+ * ============================================================================
+ *
+ * "Large" Screens
+ *
+ * We tick up the font-size another notch and increase the size of our top-most
+ * headings. Introductory text scales up a bit and small text scales down, too.
+ *
+ */
+@media screen and (min-width: $layout-lg) {
+  body {
+    font-size: $textBase-lg;
+  }
+
+  h1 {
+    font-size: $scaleUp-7;
+  }
+  h2 {
+    font-size: $scaleUp-5;
+  }
+
+  h1 + p {
+    font-size: $scaleUp-2;
+  }
+
+  small {
+    font-size: $scaleDown-3;
+  }
+}
