@@ -13,3 +13,19 @@
     @content;
   }
 }
+
+@mixin scale-font($degree) {
+  $font-size: 1rem;
+
+  @if ($degree > 0) {
+    @for $i from 1 to $degree {
+      $font-size: $font-size * $font-size-ratio;
+    }
+  } @else {
+    @for $i from 1 to $degree {
+      $font-size: $font-size / $font-size-ratio;
+    }
+  }
+
+  font-size: $font-size;
+}
