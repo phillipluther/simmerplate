@@ -36,7 +36,7 @@ li {
   overflow-wrap: break-word;
   hyphens: auto;
   margin-top: 0;
-  margin-bottom: 0.694em; // -2 scaling; TODO: turn this into a util function
+  margin-bottom: scale(-2) * 1em;
 }
 
 h1,

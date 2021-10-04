@@ -1,0 +1,17 @@
+@import "./variables";
+
+@function scale($degree) {
+  $result: 1;
+
+  @if ($degree < 1) {
+    @for $i from -1 to $degree {
+      $result: $result / $scaling-ratio;
+    }
+  } @else {
+    @for $i from 1 to $degree {
+      $result: $result * $scaling-ratio;
+    }
+  }
+
+  @return $result;
+}
