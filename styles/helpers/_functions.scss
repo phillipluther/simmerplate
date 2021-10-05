@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "./variables";
 
 @function scale($degree) {
@@ -5,7 +6,7 @@
 
   @if ($degree < 1) {
     @for $i from -1 to $degree {
-      $result: $result / $scaling-ratio;
+      $result: math.div($result, $scaling-ratio);
     }
   } @else {
     @for $i from 1 to $degree {
@@ -14,4 +15,9 @@
   }
 
   @return $result;
+}
+
+// TODO: is there a Sass module that does this?
+@function unitless($val) {
+  @return $val / ($val * 0 + 1);
 }

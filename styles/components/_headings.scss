@@ -1,0 +1,80 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/functions";
+
+// .heading-xs,
+// .heading-sm,
+// .heading-md,
+// .heading-lg,
+// .heading-xl {
+//   font-family: $font-family-display;
+//   line-height: calc(2px + 2ex + 2px);
+// }
+
+// .heading-xs {
+// }
+
+// .heading-sm {
+// }
+
+// .heading-md {
+// }
+
+// .heading-lg {
+// }
+
+// .heading-xl {
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %textflow;
+  margin: scale(-2) * 1em 0 scale(-3) * 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-size-xxl,
+.font-size-xl,
+.font-size-lg,
+.font-size-md {
+  line-height: calc(2px + 2ex + 2px);
+}
+
+h1,
+.font-size-xxl {
+  @include fluid-font-size(scale(6));
+}
+
+h2,
+.font-size-xl {
+  @include fluid-font-size(scale(5));
+}
+
+h3,
+.font-size-lg {
+  @include fluid-font-size(scale(4));
+}
+
+h4,
+.font-size-md {
+  @include fluid-font-size(scale(3));
+}
+
+/** 
+ * we start to clump H5s and H6s together, assuming they'll be used strictly
+ * for semantic purposes; when's the last time anybody legitimately needed that
+ * level of nesting in their doc hierarchy?
+ *
+ * given that, there's not a lot of finesse invested in these tags/style
+ */
+h5,
+h6 {
+  @include fluid-font-size(scale(2));
+}

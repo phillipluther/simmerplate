@@ -1,0 +1,36 @@
+@import "./variables";
+@import "./functions";
+
+@mixin at($size) {
+  $breakpoint: 0;
+
+  @if ($size == "md") {
+    $breakpoint: $screen-size-md;
+  } @else if ($size == "lg") {
+    $breakpoint: $screen-size-lg;
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin type-scale($degree) {
+  font-size: scale($degree) * 1rem;
+}
+
+@mixin fluid-font-size($level-size) {
+  $level-unitless: unitless($level-size);
+
+  // set minimum size to a percentage less than $level-size
+  // reduction is greater for large font sizes (> 4rem) to help
+  // prevent overflow due to font-size on mobile devices
+  $fluid-reduction: if($level-size > 4, 0.5, 0.33);
+  $fluid-min: $level-unitless - ($fluid-reduction * $level-unitless);
+  // ensure the minimum size is not smaller than 1rem
+  $fluid-min: if($fluid-min > 1, $fluid-min, 1);
+
+  $fluid-scaler: ($level-unitless - $fluid-min) + 4vw;
+
+  font-size: clamp(#{$fluid-min}rem, #{$fluid-scaler} + 1rem, #{$level-unitless}rem);
+}

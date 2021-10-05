@@ -1,7 +1,8 @@
 /*! Simmerplate | MIT License | github.com/phillipluther/simmerplate */
 
-@import "./variables";
-@import "./mixins";
+@import "./helpers";
+
+@import "./components/headings";
 
 * {
   box-sizing: border-box;
@@ -22,78 +23,16 @@ html {
 body {
   margin: 0;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: $line-height-base;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 li {
   overflow-wrap: break-word;
   hyphens: auto;
-  margin-top: 0;
-  margin-bottom: scale(-2) * 1em;
 }
 
-h1,
-h2,
-h3,
-h4,
-.font-size-xxl,
-.font-size-xl,
-.font-size-lg,
-.font-size-md {
-  line-height: calc(2px + 2ex + 2px);
-}
-
-h1,
-.font-size-xxl {
-  @include scale-font(6);
-
-  @include at(md) {
-    @include scale-font(7);
-  }
-}
-
-h2,
-.font-size-xl {
-  @include scale-font(4);
-
-  @include at(md) {
-    @include scale-font(5);
-  }
-}
-
-h3,
-.font-size-lg {
-  @include scale-font(3);
-
-  @include at(md) {
-    @include scale-font(4);
-  }
-}
-
-h4,
-.font-size-md {
-  @include scale-font(2);
-
-  @include at(md) {
-    @include scale-font(3);
-  }
-}
-
-/** 
- * we start to clump H5s and H6s together, assuming they'll be used strictly
- * for semantic purposes; when's the last time anybody legitimately needed that
- * level of nesting in their doc hierarchy?
- *
- * given that, there's not a lot of finesse invested in these tags/style
- */
-h5,
-h6 {
-  @include scale-font(1);
+p,
+li {
+  margin: 0 0 scale(-2) * 1em;
 }
