@@ -8,6 +8,7 @@ h5,
 h6,
 [class*="heading-"] {
   @extend %textflow;
+  font-family: $font-family-display;
   font-weight: $font-family-display-weight;
   line-height: calc(2px + 2ex + 2px);
   margin: scale(-2) * 1em 0 scale(-3) * 1em;

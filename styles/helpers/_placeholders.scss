@@ -2,3 +2,13 @@
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+%pseudo-children {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+}

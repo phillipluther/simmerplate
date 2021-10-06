@@ -1,0 +1,27 @@
+$text-margin: scale(-1) * 1em;
+
+p,
+li {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+p,
+li {
+  margin: 0 0 $text-margin;
+}
+
+blockquote {
+  @extend %pseudo-children;
+
+  font-style: italic;
+  margin: $text-margin;
+  padding-left: $text-margin * 2;
+
+  &::after {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: $text-margin / 3 solid;
+  }
+}

@@ -2,6 +2,7 @@
 
 @import "./helpers";
 @import "./components/headings";
+@import "./components/text";
 
 * {
   box-sizing: border-box;
@@ -24,15 +25,4 @@ body {
   font-weight: $font-family-text-weight;
   line-height: $line-height-base;
   margin: 0;
-}
-
-p,
-li {
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
-
-p,
-li {
-  margin: 0 0 scale(-2) * 1em;
 }
