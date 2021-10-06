@@ -1,7 +1,6 @@
 /*! Simmerplate | MIT License | github.com/phillipluther/simmerplate */
 
 @import "./helpers";
-
 @import "./components/headings";
 
 * {
@@ -21,9 +20,10 @@ html {
 }
 
 body {
-  margin: 0;
-  font-weight: normal;
+  font-family: $font-family-text;
+  font-weight: $font-family-text-weight;
   line-height: $line-height-base;
+  margin: 0;
 }
 
 p,

@@ -2,7 +2,7 @@
   "name": "simmerplate",
   "version": "0.5.0",
   "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
-  "main": "css/simmerplate-sans.css",
+  "main": "css/simmerplate.css",
   "files": [
     "css"
   ],
@@ -15,7 +15,7 @@
     "dev:serve": "node scripts/dev-server",
     "prebuild": "npm run clean",
     "predev": "npm run clean",
-    "watch:styles": "sass styles/simmerplate-sans.scss:css/simmerplate-sans.css styles/simmerplate-serif.scss:css/simmerplate-serif.css --watch"
+    "watch:styles": "sass styles/simmerplate.scss:css/simmerplate.css --watch"
   },
   "keywords": [
     "typography",
