@@ -6,12 +6,45 @@
     <title>Simmerplate :: HTML Demo Page</title>
 
     <link rel="stylesheet" href="simmerplate.css" />
+    <style>
+      #top {
+        max-width: 832px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .chapter-heading {
+        font-size: 1rem;
+        color: white;
+        background: #196929;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        margin-left: -16px;
+      }
+
+      .section-heading {
+        font-size: 1.1rem;
+        position: relative;
+        padding-left: 16px;
+        margin-left: -16px;
+        color: #196929;
+      }
+
+      .section-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-right: 8px solid #196929;
+      }
+    </style>
   </head>
   <body>
     <div id="top" role="document">
       <header>
         <h1>Simmerplate :: HTML Demo Page</h1>
-        <p>This is a test page filled with common HTML elements and how they appear when applying Simmerplate.</p>
+        <p>This is a test page filled with common HTML elements and how they appear when applying Simmerplate. Note that items in <strong style="color: #196929">green</strong> are not part of the library and are used for demo/organizational purposes.</p>
       </header>
       <nav>
         <ul>
