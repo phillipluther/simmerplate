@@ -19,5 +19,5 @@
 
 // TODO: is there a Sass module that does this?
 @function unitless($val) {
-  @return $val / ($val * 0 + 1);
+  @return math.div($val, ($val * 0 + 1));
 }

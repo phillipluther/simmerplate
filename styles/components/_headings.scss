@@ -1,69 +1,35 @@
-@import "../helpers/variables";
-@import "../helpers/mixins";
-@import "../helpers/functions";
-
-// .heading-xs,
-// .heading-sm,
-// .heading-md,
-// .heading-lg,
-// .heading-xl {
-//   font-family: $font-family-display;
-//   line-height: calc(2px + 2ex + 2px);
-// }
-
-// .heading-xs {
-// }
-
-// .heading-sm {
-// }
-
-// .heading-md {
-// }
-
-// .heading-lg {
-// }
-
-// .heading-xl {
-// }
+@import "../helpers";
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+[class*="heading-"] {
   @extend %textflow;
+  font-weight: $font-family-display-weight;
+  line-height: calc(2px + 2ex + 2px);
   margin: scale(-2) * 1em 0 scale(-3) * 1em;
 }
 
 h1,
-h2,
-h3,
-h4,
-.font-size-xxl,
-.font-size-xl,
-.font-size-lg,
-.font-size-md {
-  line-height: calc(2px + 2ex + 2px);
-}
-
-h1,
-.font-size-xxl {
+.heading-xl {
   @include fluid-font-size(scale(6));
 }
 
 h2,
-.font-size-xl {
+.heading-lg {
   @include fluid-font-size(scale(5));
 }
 
 h3,
-.font-size-lg {
+.heading-md {
   @include fluid-font-size(scale(4));
 }
 
 h4,
-.font-size-md {
+.heading-sm {
   @include fluid-font-size(scale(3));
 }
 
@@ -75,6 +41,7 @@ h4,
  * given that, there's not a lot of finesse invested in these tags/style
  */
 h5,
-h6 {
+h6,
+.heading-xs {
   @include fluid-font-size(scale(2));
 }
