@@ -41,19 +41,10 @@ $font-family-text-weight: 400;
  * the color spectrum for best results.
  */
 $color-primary: #808386;
-$color-accent: #29a969;
-$color-adjustment: 12%;
-// derived colors
-$color-primary-darkest: darken($color-primary, $color-adjustment * 3);
-$color-primary-darker: darken($color-primary, $color-adjustment * 2);
-$color-primary-dark: darken($color-primary, $color-adjustment);
-$color-primary-light: lighten($color-primary, $color-adjustment);
-$color-primary-lighter: lighten($color-primary, $color-adjustment * 2);
-$color-primary-lightest: lighten($color-primary, $color-adjustment * 3);
+$color-accent: #789abc;
 
-$color-accent-darkest: darken($color-primary, $color-adjustment * 3);
-$color-accent-darker: darken($color-primary, $color-adjustment * 2);
-$color-accent-dark: darken($color-primary, $color-adjustment);
-$color-accent-light: lighten($color-primary, $color-adjustment);
-$color-accent-lighter: lighten($color-primary, $color-adjustment * 2);
-$color-accent-lightest: lighten($color-primary, $color-adjustment * 3);
+/**
+ * Used in creating tints and shades of the primary and accent colors defined
+ * above
+ */
+$color-adjustment: 12%;

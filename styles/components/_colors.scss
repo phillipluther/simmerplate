@@ -1,0 +1,133 @@
+@import "../helpers/variables";
+
+// derived colors; these are built using the primary and accent colors, as
+// well as the color stepping value defined in the global variables file
+$color-primary-darkest: darken($color-primary, $color-adjustment * 3);
+$color-primary-darker: darken($color-primary, $color-adjustment * 2);
+$color-primary-dark: darken($color-primary, $color-adjustment);
+$color-primary-light: lighten($color-primary, $color-adjustment);
+$color-primary-lighter: lighten($color-primary, $color-adjustment * 2);
+$color-primary-lightest: lighten($color-primary, $color-adjustment * 3);
+
+$color-accent-darkest: darken($color-accent, $color-adjustment * 3);
+$color-accent-darker: darken($color-accent, $color-adjustment * 2);
+$color-accent-dark: darken($color-accent, $color-adjustment);
+$color-accent-light: lighten($color-accent, $color-adjustment);
+$color-accent-lighter: lighten($color-accent, $color-adjustment * 2);
+$color-accent-lightest: lighten($color-accent, $color-adjustment * 3);
+
+// primary color decorators
+
+.color-primary-darkest {
+  color: $color-primary-darkest;
+}
+
+.color-primary-darker {
+  color: $color-primary-darker;
+}
+
+.color-primary-dark {
+  color: $color-primary-dark;
+}
+
+.color-primary {
+  color: $color-primary;
+}
+
+.color-primary-light {
+  color: $color-primary-light;
+}
+
+.color-primary-lighter {
+  color: $color-primary-lighter;
+}
+
+.color-primary-lightest {
+  color: $color-primary-lightest;
+}
+
+.bg-primary-darkest {
+  background-color: $color-primary-darkest;
+}
+
+.bg-primary-darker {
+  background-color: $color-primary-darker;
+}
+
+.bg-primary-dark {
+  background-color: $color-primary-dark;
+}
+
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.bg-primary-light {
+  background-color: $color-primary-light;
+}
+
+.bg-primary-lighter {
+  background-color: $color-primary-lighter;
+}
+
+.bg-primary-lightest {
+  background-color: $color-primary-lightest;
+}
+
+// accent color decorators
+
+.color-accent-darkest {
+  color: $color-accent-darkest;
+}
+
+.color-accent-darker {
+  color: $color-accent-darker;
+}
+
+.color-accent-dark {
+  color: $color-accent-dark;
+}
+
+.color-accent {
+  color: $color-accent;
+}
+
+.color-accent-light {
+  color: $color-accent-light;
+}
+
+.color-accent-lighter {
+  color: $color-accent-lighter;
+}
+
+.color-accent-lightest {
+  color: $color-accent-lightest;
+}
+
+.bg-accent-darkest {
+  background-color: $color-accent-darkest;
+}
+
+.bg-accent-darker {
+  background-color: $color-accent-darker;
+}
+
+.bg-accent-dark {
+  background-color: $color-accent-dark;
+}
+
+.bg-accent {
+  background-color: $color-accent;
+}
+
+.bg-accent-light {
+  background-color: $color-accent-light;
+}
+
+.bg-accent-lighter {
+  background-color: $color-accent-lighter;
+}
+
+.bg-accent-lightest {
+  background-color: $color-accent-lightest;
+}

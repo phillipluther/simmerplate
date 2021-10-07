@@ -13,7 +13,7 @@
         padding: 16px;
       }
 
-      .chapter-heading {
+      .demo__chapter-heading {
         font-size: 1rem;
         color: white;
         background: #196929;
@@ -22,7 +22,7 @@
         margin-left: -16px;
       }
 
-      .section-heading {
+      .demo__section-heading {
         font-size: 1.25rem;
         position: relative;
         padding-left: 16px;
@@ -31,13 +31,18 @@
         margin-top: 1.25em;
       }
 
-      .section-heading::after {
+      .demo__section-heading::after {
         content: "";
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         border-right: 8px solid #196929;
+      }
+
+      .demo__bg-block {
+        display: block;
+        padding: 8px;
       }
     </style>
   </head>
@@ -63,6 +68,13 @@
               <li><a href="#text__code">Code</a></li>
               <li><a href="#text__inline">Inline elements</a></li>
               <li><a href="#text__comments">HTML Comments</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#colors">Color Palette</a>
+            <ul>
+              <li><a href="#colors__primary">Primary Colors</a></li>
+              <li><a href="#colors__accent">Accent Colors</a></li>
             </ul>
           </li>
           <li>
@@ -97,10 +109,10 @@
       </nav>
       <main>
         <section id="text">
-          <header><h1 class="chapter-heading">Text</h1></header>
+          <header><h1 class="demo__chapter-heading">Text</h1></header>
           <article id="text__headings">
             <header>
-              <h2 class="section-heading">Headings</h2>
+              <h2 class="demo__section-heading">Headings</h2>
             </header>
             <div>
               <h1>&lt;h1&gt; Heading 1</h1>
@@ -122,7 +134,7 @@
             </footer>
           </article>
           <article id="text__paragraphs">
-            <header><h2 class="section-heading">Paragraphs</h2></header>
+            <header><h2 class="demo__section-heading">Paragraphs</h2></header>
             <div>
               <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
             </div>
@@ -131,7 +143,7 @@
             </footer>
           </article>
           <article id="text__blockquotes">
-            <header><h2 class="section-heading">Blockquotes</h2></header>
+            <header><h2 class="demo__section-heading">Blockquotes</h2></header>
             <div>
               <blockquote>
                 <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
@@ -397,6 +409,62 @@ P R E F O R M A T T E D T E X T
             </footer>
           </article>
         </section>
+
+        <section id="colors">
+          <article id="colors__primary">
+            <header><h2 class="demo__chapter-heading">Primary Colors</h2></header>
+            <div>
+              <h3 class="demo__section-heading">On Text</h3>
+              <p class="color-primary-lightest">.color-primary-lightest</p>
+              <p class="color-primary-lighter">.color-primary-lighter</p>
+              <p class="color-primary-light">.color-primary-light</p>
+              <p class="color-primary">.color-primary</p>
+              <p class="color-primary-dark">.color-primary-dark</p>
+              <p class="color-primary-darker">.color-primary-darker</p>
+              <p class="color-primary-darkest">.color-primary-darkest</p>
+            </div>
+            <div>
+              <h3 class="demo__section-heading">As a Background Color</h3>
+              <p class="bg-primary-lightest demo__bg-block">.bg-primary-lightest</p>
+              <p class="bg-primary-lighter demo__bg-block">.bg-primary-lighter</p>
+              <p class="bg-primary-light demo__bg-block">.bg-primary-light</p>
+              <p class="bg-primary demo__bg-block">.bg-primary</p>
+              <p class="bg-primary-dark color-primary-lightest demo__bg-block">.bg-primary-dark</p>
+              <p class="bg-primary-darker color-primary-lightest demo__bg-block">.bg-primary-darker</p>
+              <p class="bg-primary-darkest color-primary-lightest demo__bg-block">.bg-primary-darkest</p>
+            </div>
+            <footer>
+              <p><a href="#top">[Top]</a></p>
+            </footer>
+          </article>
+          <article id="colors__accent">
+            <header><h2 class="demo__chapter-heading">Accent Colors</h2></header>
+            <div>
+              <h3 class="demo__section-heading">On Text</h3>
+              <p class="color-accent-lightest">.color-accent-lightest</p>
+              <p class="color-accent-lighter">.color-accent-lighter</p>
+              <p class="color-accent-light">.color-accent-light</p>
+              <p class="color-accent">.color-accent</p>
+              <p class="color-accent-dark">.color-accent-dark</p>
+              <p class="color-accent-darker">.color-accent-darker</p>
+              <p class="color-accent-darkest">.color-accent-darkest</p>
+            </div>
+            <div>
+              <h3 class="demo__section-heading">As a Background Color</h3>
+              <p class="bg-accent-lightest demo__bg-block">.bg-accent-lightest</p>
+              <p class="bg-accent-lighter demo__bg-block">.bg-accent-lighter</p>
+              <p class="bg-accent-light demo__bg-block">.bg-accent-light</p>
+              <p class="bg-accent demo__bg-block">.bg-accent</p>
+              <p class="bg-accent-dark color-primary-lightest demo__bg-block">.bg-accent-dark</p>
+              <p class="bg-accent-darker color-primary-lightest demo__bg-block">.bg-accent-darker</p>
+              <p class="bg-accent-darkest color-primary-lightest demo__bg-block">.bg-accent-darkest</p>
+            </div>
+            <footer>
+              <p><a href="#top">[Top]</a></p>
+            </footer>
+          </article>
+        </section>
+
         <section id="embedded">
           <header><h2>Embedded content</h2></header>
           <article id="embedded__images">
