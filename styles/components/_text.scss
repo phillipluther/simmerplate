@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $text-margin: scale(-1) * 1em;
 
 p,
@@ -22,6 +24,6 @@ blockquote {
     left: 0;
     top: 0;
     bottom: 0;
-    border-right: $text-margin / 3 solid;
+    border-right: math.div($text-margin, 3) solid $color-primary-lightest;
   }
 }
