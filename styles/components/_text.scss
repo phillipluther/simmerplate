@@ -1,16 +1,45 @@
 @use "sass:math";
 
 $text-margin: scale(-1) * 1em;
+$list-margin: scale(-4) * 1em;
 
 p,
-li {
+li,
+dt,
+dd {
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-p,
-li {
+ol,
+ul,
+dl,
+p {
   margin: 0 0 $text-margin;
+}
+
+ol,
+ul {
+  padding-left: scale(4) * 1em;
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: $list-margin;
+}
+
+dd {
+  margin-left: $text-margin;
+}
+
+li {
+  margin: 0 0 $list-margin;
+
+  ul,
+  ol,
+  dl {
+    margin-top: $list-margin;
+  }
 }
 
 blockquote {
