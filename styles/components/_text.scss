@@ -15,7 +15,8 @@ ol,
 ul,
 dl,
 p,
-details {
+details,
+address {
   margin: 0 0 $text-margin;
 }
 
@@ -65,4 +66,14 @@ summary {
 
 details {
   padding-left: scale(2) * 1em;
+}
+
+address {
+  font-style: inherit;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid $color-primary;
+  margin: $list-x-margin 0;
 }
