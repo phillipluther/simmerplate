@@ -1,31 +1,32 @@
 @use "sass:math";
 
 $text-margin: scale(-1) * 1em;
-$list-margin: scale(-4) * 1em;
+$list-x-margin: scale(4) * 1em;
+$list-y-margin: scale(-4) * 1em;
 
 p,
 li,
 dt,
 dd {
-  overflow-wrap: break-word;
-  hyphens: auto;
+  @extend %textflow;
 }
 
 ol,
 ul,
 dl,
-p {
+p,
+details {
   margin: 0 0 $text-margin;
 }
 
 ol,
 ul {
-  padding-left: scale(4) * 1em;
+  padding-left: $list-x-margin;
 }
 
 dt {
   font-weight: bold;
-  margin-bottom: $list-margin;
+  margin-bottom: $list-y-margin;
 }
 
 dd {
@@ -33,12 +34,12 @@ dd {
 }
 
 li {
-  margin: 0 0 $list-margin;
+  margin: 0 0 $list-y-margin;
 
   ul,
   ol,
   dl {
-    margin-top: $list-margin;
+    margin-top: $list-y-margin;
   }
 }
 
@@ -55,4 +56,13 @@ blockquote {
     bottom: 0;
     border-right: math.div($text-margin, 3) solid $color-primary-lightest;
   }
+}
+
+summary {
+  margin-bottom: $list-y-margin;
+  list-style-position: outside;
+}
+
+details {
+  padding-left: scale(2) * 1em;
 }
