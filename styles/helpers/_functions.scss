@@ -5,7 +5,7 @@
   $result: 1;
 
   @if ($degree < 1) {
-    @for $i from -1 to $degree {
+    @for $i from 0 to $degree {
       $result: math.div($result, $scaling-ratio);
     }
   } @else {

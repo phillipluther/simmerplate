@@ -1,0 +1,36 @@
+$table__border-color: $color-primary-light;
+
+table {
+  border-collapse: collapse;
+  border: 1px solid $table__border-color;
+  font: inherit;
+}
+
+td,
+th {
+  padding: scale(-2) * 1rem;
+}
+
+td {
+  border: 1px solid $table__border-color;
+
+  tr:nth-child(even) & {
+    background-color: $color-primary-lightest;
+  }
+
+  tr:nth-child(odd) & {
+    background-color: white;
+  }
+}
+
+th {
+  @include type-scale(-1);
+  background-color: $color-primary-lighter;
+  font-weight: bold;
+}
+
+caption {
+  @include type-scale(-1);
+  padding: scale(-2) * 1em;
+  caption-side: bottom;
+}
