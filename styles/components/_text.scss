@@ -1,8 +1,28 @@
 @use "sass:math";
 
-$text-margin: scale(1) * 1em;
+$text-margin: 1em;
 $list-x-margin: scale(4) * 1em;
 $list-y-margin: scale(-3) * 1em;
+
+html {
+  font-size: $font-size-base;
+
+  @include at(md) {
+    font-size: $font-size-base-md;
+  }
+
+  @include at(lg) {
+    font-size: $font-size-base-lg;
+  }
+}
+
+body {
+  @extend %text-font;
+
+  font-weight: $font-family-text-weight;
+  color: $color-primary-darkest;
+  line-height: $line-height-base;
+}
 
 p,
 li,
@@ -16,7 +36,8 @@ ul,
 dl,
 p,
 details,
-address {
+address,
+pre {
   margin: 0 0 $text-margin;
 }
 
@@ -76,4 +97,26 @@ hr {
   border: 0;
   border-top: 2px solid $color-primary;
   margin: $list-x-margin 0;
+}
+
+kbd,
+code,
+samp,
+pre,
+.font-mono {
+  @extend %mono-font;
+  font-size: inherit;
+}
+
+pre {
+  padding: 1rem;
+  background: $color-primary-lightest;
+}
+
+.font-display {
+  @extend %display-font;
+}
+
+.font-text {
+  @extend %text-font;
 }

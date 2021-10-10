@@ -12,3 +12,15 @@
     position: absolute;
   }
 }
+
+%text-font {
+  font-family: $font-family-text;
+}
+
+%display-font {
+  font-family: $font-family-display;
+}
+
+%mono-font {
+  font-family: $font-family-mono;
+}

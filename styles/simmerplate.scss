@@ -10,22 +10,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: $font-size-base;
-
-  @include at(md) {
-    font-size: $font-size-base-md;
-  }
-
-  @include at(lg) {
-    font-size: $font-size-base-lg;
-  }
-}
-
 body {
-  font-family: $font-family-text;
-  font-weight: $font-family-text-weight;
-  color: $color-primary-darkest;
-  line-height: $line-height-base;
   margin: 0;
 }

@@ -9,7 +9,7 @@
       $result: math.div($result, $scaling-ratio);
     }
   } @else {
-    @for $i from 1 to $degree {
+    @for $i from 0 to $degree {
       $result: $result * $scaling-ratio;
     }
   }
