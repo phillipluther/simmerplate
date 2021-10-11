@@ -31,11 +31,6 @@ a {
     color: $color-accent-darker;
     text-decoration: none;
   }
-
-  &:focus {
-    outline: 1px solid $color-accent-darker;
-    outline-offset: 2px;
-  }
 }
 
 p,

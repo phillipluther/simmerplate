@@ -6,3 +6,10 @@ figcaption {
   @include type-scale(-1);
   margin: scale(-2) * 1em 0;
 }
+
+audio,
+video {
+  display: block;
+  width: 100%;
+  background-color: $color-accent;
+}
