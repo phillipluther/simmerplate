@@ -24,6 +24,21 @@ body {
   line-height: $line-height-base;
 }
 
+a {
+  color: $color-accent-dark;
+
+  &:hover,
+  &:focus {
+    color: $color-accent-darker;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 1px solid $color-accent-darker;
+    outline-offset: 4px;
+  }
+}
+
 p,
 li,
 dt,
@@ -111,6 +126,10 @@ pre,
 pre {
   padding: 1rem;
   background: $color-primary-lightest;
+}
+
+small {
+  @include type-scale(-1);
 }
 
 .font-display {
