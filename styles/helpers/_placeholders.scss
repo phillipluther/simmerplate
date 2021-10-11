@@ -24,3 +24,11 @@
 %mono-font {
   font-family: $font-family-mono;
 }
+
+%bottom-margin {
+  margin: 0 0 1em;
+}
+
+%bottom-margin-sm {
+  margin: 0 0 scale(-2) * 1em;
+}

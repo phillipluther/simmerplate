@@ -1,0 +1,8 @@
+figure {
+  @extend %bottom-margin;
+}
+
+figcaption {
+  @include type-scale(-1);
+  margin: scale(-2) * 1em 0;
+}

@@ -2,7 +2,6 @@
 
 $text-margin: 1em;
 $list-x-margin: scale(4) * 1em;
-$list-y-margin: scale(-3) * 1em;
 
 html {
   font-size: $font-size-base;
@@ -35,7 +34,7 @@ a {
 
   &:focus {
     outline: 1px solid $color-accent-darker;
-    outline-offset: 4px;
+    outline-offset: 2px;
   }
 }
 
@@ -53,7 +52,7 @@ p,
 details,
 address,
 pre {
-  margin: 0 0 $text-margin;
+  @extend %bottom-margin;
 }
 
 ol,
@@ -62,8 +61,8 @@ ul {
 }
 
 dt {
+  @extend %bottom-margin-sm;
   font-weight: bold;
-  margin-bottom: $list-y-margin;
 }
 
 dd {
@@ -71,12 +70,12 @@ dd {
 }
 
 li {
-  margin: 0 0 $list-y-margin;
+  @extend %bottom-margin-sm;
 
   ul,
   ol,
   dl {
-    margin-top: $list-y-margin;
+    margin-top: scale(-2) * 1em;
   }
 }
 
@@ -96,7 +95,7 @@ blockquote {
 }
 
 summary {
-  margin-bottom: $list-y-margin;
+  @extend %bottom-margin-sm;
   list-style-position: outside;
 }
 

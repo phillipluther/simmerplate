@@ -87,7 +87,6 @@
             <a href="#embedded">Embedded content</a>
             <ul>
               <li><a href="#embedded__images">Images</a></li>
-              <li><a href="#embedded__bgimages">Background images</a></li>
               <li><a href="#embedded__audio">Audio</a></li>
               <li><a href="#embedded__video">Video</a></li>
               <li><a href="#embedded__canvas">Canvas</a></li>
@@ -448,20 +447,20 @@ P R E F O R M A T T E D T E X T
         </section>
 
         <section id="embedded">
-          <header><h2>Embedded content</h2></header>
+          <header><h2 class="demo__chapter-heading">Embedded content</h2></header>
           <article id="embedded__images">
-            <header><h2>Images</h2></header>
+            <header><h2 class="demo__section-heading">Images</h2></header>
             <div>
-              <h3>Plain <code>&lt;img&gt;</code> element</h3>
+              <h3 class="demo__sub-section-heading">Plain <code>&lt;img&gt;</code> element</h3>
               <p><img src="https://placekitten.com/480/480" alt="Photo of a kitten" /></p>
-              <h3><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> element</h3>
+              <h3 class="demo__sub-section-heading"><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> element</h3>
               <figure><img src="https://placekitten.com/420/420" alt="Photo of a kitten" /></figure>
-              <h3><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> and <code>&lt;figcaption&gt;</code> elements</h3>
+              <h3 class="demo__sub-section-heading"><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> and <code>&lt;figcaption&gt;</code> elements</h3>
               <figure>
                 <img src="https://placekitten.com/420/420" alt="Photo of a kitten" />
                 <figcaption>Here is a caption for this image.</figcaption>
               </figure>
-              <h3><code>&lt;figure&gt;</code> element with a <code>&lt;picture&gt;</code> element</h3>
+              <h3 class="demo__sub-section-heading"><code>&lt;figure&gt;</code> element with a <code>&lt;picture&gt;</code> element</h3>
               <figure>
                 <picture>
                   <source srcset="https://placekitten.com/800/800" media="(min-width: 800px)" />
@@ -469,13 +468,6 @@ P R E F O R M A T T E D T E X T
                 </picture>
               </figure>
             </div>
-            <footer>
-              <p><a href="#top">[Top]</a></p>
-            </footer>
-          </article>
-          <article id="embedded__bgimages">
-            <header><h2>Background images</h2></header>
-            <div style="background-image: url('https://placekitten.com/300/300'); width: 300px; height: 300px"></div>
             <footer>
               <p><a href="#top">[Top]</a></p>
             </footer>
