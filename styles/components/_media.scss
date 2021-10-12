@@ -11,5 +11,22 @@ audio,
 video {
   display: block;
   width: 100%;
+}
+
+video {
   background-color: $color-accent;
+}
+
+progress {
+  display: block;
+  width: 100%;
+}
+
+iframe,
+embed {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
