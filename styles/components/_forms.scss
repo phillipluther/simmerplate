@@ -28,7 +28,8 @@ legend {
 [type="tel"],
 [type="search"],
 [type="number"],
-[type="file"] {
+[type="file"],
+select {
   @extend %bottom-margin;
   @extend %text-font;
 
@@ -39,20 +40,14 @@ legend {
   border: 1px solid $color-primary-dark;
   border-radius: 4px;
 
+  &:not([type="file"]) {
+    padding: scale(-2) * 1em;
+  }
+
   &:focus {
     outline: 2px solid $color-accent;
     border-color: $color-accent;
   }
-}
-
-[type="text"],
-[type="password"],
-[type="url"],
-[type="email"],
-[type="tel"],
-[type="search"],
-[type="number"] {
-  padding: scale(-2) * 1em;
 }
 
 [type="file"] {
