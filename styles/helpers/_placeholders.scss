@@ -32,3 +32,21 @@
 %bottom-margin-sm {
   margin: 0 0 scale(-2) * 1em;
 }
+
+%bordered {
+  border-radius: 4px;
+  border: 1px solid $color-primary;
+}
+
+%blocked {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+%focus-outline {
+  &:focus {
+    outline: 2px solid $color-accent;
+    border-color: $color-accent;
+  }
+}
