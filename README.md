@@ -1,7 +1,5 @@
 # Simmerplate
 
-> **NOTE:** This project is going through significant changes, often on the `main` branch. The version published to NPM is stable and tagged `0.5.0`
-
 A "good enough" UI baseline so you can focus on development. It's not quite a boilerplate.
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
@@ -10,9 +8,9 @@ A "good enough" UI baseline so you can focus on development. It's not quite a bo
 
 --------------------------------------
 
-## Installation
+## Installation and Usage
 
-### NPM
+Install Simmerplate via NPM (or Yarn, or the like), then simply include it in your project.
 
 ```
 npm install --save simmerplate
@@ -25,14 +23,6 @@ Then simply include it.
 import 'simmerplate';
 ```
 
-#### Variants
-
-Simmerplate comes in a serif and sans-serif version. The default import is for sans. If you want to use the serif font version, you can pull it in like so:
-
-```
-import 'simmerplate/css/simmerplate-serif.css';
-```
-
 ## Demo
 
 ... coming soon ...
@@ -40,29 +30,27 @@ import 'simmerplate/css/simmerplate-serif.css';
 
 ## About the Project
 
-Rendered browser defaults futz with my chi. They're awful. CSS normalizers improve things but don't look great. CSS frameworks come with a ton of baggage you often don't need.
+Browser defaults for text and most HTML elements are awful. CSS normalizers improve things but still look too "default." CSS frameworks come with a ton of baggage you often don't need.
 
-Simmerplate is a drop-in CSS file to get initial formatting out of the way.
+Simmerplate is a single drop-in CSS file to get initial formatting out of the way.
 
 ### Simmerplate Is
 
-Simmerplate is an approximation of designed typography and UI polish. Under the hood, it's an extended version of Nicolas Gallagher's stellar [normalize.css](https://github.com/necolas/normalize.css/) project.
+Simmerplate is an _approximation_ of designed typography and UI polish. It aims to be a quick-and-easy, better-than-default theme for prototyping or quick development projects.
 
-In addition to browser normalization it also provides sane spacing and layout tweaks to make your text look good'ish. You'll get:
+Aside for providing sane spacing and layout tweaks to make your project look good'ish, you'll get:
 
-* All the sweetness from normalize.css, plus
 * Solid-looking typography with good vertical rhythm
 * Better-than-default styling for form elements
 * A sound starting point for creating your own typography styles; it's non-specific and easy to override
-* A no-worries, "fine for now" development baseline so you can focus on heavy-lifting, not finessing text and form inputs
+* A no-worries, "fine for now" development baseline so you can focus on heavy-lifting, not finessing text, forms, and other HTML elements
 
 
 ### Simmerplate is Not
 
-Simmerplate is not an assertion of perfect text flow. If you dig how it looks, roll with it. If not, style over it or scrap it altogether down the way.
+Simmerplate is not trying to be a robust visual system. It is not a full theme or CSS framework. It doesn't include a grid. It contains no Javascript and relies on what browsers are able to process purely via CSS. Simmerplate merely tries to whip the browser default UI into better shape.
 
-It's also not a full theme or CSS framework. It doesn't include a grid. It also contains no Javascript so it relies on what browsers are able to process purely via CSS. Simmerplate merely tries to whip the browser default UI into better shape.
-
+Simmerplate is not precious: it expects you to style over it or scrap it for something better when visuals start to matter.
 
 ## Contributing
 

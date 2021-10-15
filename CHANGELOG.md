@@ -2,6 +2,16 @@
 
 ---------------------------------
 
+## October 2021
+
+### 0.6.0
+
+* Big, big breaking changes
+* Combined the sans-/serif- stylesheets; there's now only a single version of Simmerplate
+* Updated and simplified responsive breakpoints
+* Added fluid sizing for headings
+* Added significantly more HTML elements
+
 ## September 2021
 
 ### 0.5.0

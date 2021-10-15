@@ -1,6 +1,6 @@
 {
   "name": "simmerplate",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A 'good enough' UI baseline so you can focus on development. It's not quite a boilerplate.",
   "main": "css/simmerplate.css",
   "files": [
