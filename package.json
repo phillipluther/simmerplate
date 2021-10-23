@@ -7,7 +7,7 @@
     "css"
   ],
   "scripts": {
-    "clean": "rm -rf ./css ./public ./demo",
+    "clean": "rm -rf ./css ./public",
     "build:styles": "node scripts/build-styles",
     "build:demo": "node scripts/build-demo",
     "build": "run-s build:styles build:demo",
