@@ -5,6 +5,7 @@ A "good enough" UI baseline so you can focus on development. It's not quite a bo
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
 [![NPM Information](https://img.shields.io/npm/v/simmerplate.svg)](https://www.npmjs.com/package/simmerplate)
 [![Change Log](https://img.shields.io/badge/changelog-md-blue.svg)](CHANGELOG.md)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2311eba3-8358-451d-ad80-91b374d32081/deploy-status)](https://app.netlify.com/sites/simmerplate/deploys)
 
 --------------------------------------
 
@@ -25,8 +26,7 @@ import 'simmerplate';
 
 ## Demo
 
-... coming soon ...
-
+The [Simmerplate demo](https://simmerplate.netlify.app/) is hosted over on Netlify.
 
 ## About the Project
 

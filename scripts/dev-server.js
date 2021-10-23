@@ -3,15 +3,15 @@ const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 const path = require('path');
 const fs = require('fs');
-const { STYLES_DEST_DIR, SITE_SRC_DIR } = require('./constants');
+const { STYLES_DEST_DIR, DEMO_SRC_DIR } = require('./constants');
 
 const app = express();
 app.use(connectLivereload());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(SITE_SRC_DIR));
+app.use(express.static(DEMO_SRC_DIR));
 
 const livereloadServer = livereload.createServer();
-livereloadServer.watch([SITE_SRC_DIR, STYLES_DEST_DIR]);
+livereloadServer.watch([DEMO_SRC_DIR, STYLES_DEST_DIR]);
 
 app.get('/:file', (req, res) => {
   const { file = 'index' } = req.params;
@@ -21,7 +21,7 @@ app.get('/:file', (req, res) => {
     return;
   } 
 
-  const htmlFile = path.join(SITE_SRC_DIR, `${file}.html`);
+  const htmlFile = path.join(DEMO_SRC_DIR, `${file}.html`);
   if (fs.existsSync(htmlFile)) {
     res.sendFile(htmlFile);
     return;

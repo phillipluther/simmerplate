@@ -1,18 +1,18 @@
 const path = require('path');
 const fs = require('fs');
-const { SITE_SRC_DIR, SITE_DEST_DIR, STYLES_DEST_DIR } = require('./constants');
+const { DEMO_SRC_DIR, DEMO_DEST_DIR, STYLES_DEST_DIR } = require('./constants');
 
-if (fs.existsSync(SITE_DEST_DIR)) {
-  fs.rmSync(SITE_DEST_DIR, { recursive: true });
+if (fs.existsSync(DEMO_DEST_DIR)) {
+  fs.rmSync(DEMO_DEST_DIR, { recursive: true });
 }
-fs.mkdirSync(SITE_DEST_DIR);
+fs.mkdirSync(DEMO_DEST_DIR);
 
-const siteFiles = fs.readdirSync(SITE_SRC_DIR);
+const demoFiles = fs.readdirSync(DEMO_SRC_DIR);
 
-siteFiles.forEach((file) => {
+demoFiles.forEach((file) => {
   fs.copyFileSync(
-    path.join(SITE_SRC_DIR, file),
-    path.join(SITE_DEST_DIR, file),
+    path.join(DEMO_SRC_DIR, file),
+    path.join(DEMO_DEST_DIR, file),
   );
 });
 
@@ -26,6 +26,6 @@ const cssFiles = fs.readdirSync(STYLES_DEST_DIR);
 cssFiles.forEach((file) => {
   fs.copyFileSync(
     path.join(STYLES_DEST_DIR, file),
-    path.join(SITE_DEST_DIR, file),
+    path.join(DEMO_DEST_DIR, file),
   );
 });

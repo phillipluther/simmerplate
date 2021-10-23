@@ -7,10 +7,10 @@
     "css"
   ],
   "scripts": {
-    "clean": "rm -rf ./css ./public",
+    "clean": "rm -rf ./css ./public ./demo",
     "build:styles": "node scripts/build-styles",
-    "build:site": "node scripts/build-site",
-    "build": "run-s build:styles build:site",
+    "build:demo": "node scripts/build-demo",
+    "build": "run-s build:styles build:demo",
     "dev": "run-p watch:styles dev:serve",
     "dev:serve": "node scripts/dev-server",
     "prebuild": "npm run clean",
